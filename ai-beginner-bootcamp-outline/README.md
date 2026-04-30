@@ -22,181 +22,151 @@ By the end of Day 5, participants will be able to:
 
 ---
 
-## Day 1 (Wednesday) - Understand AI
-**Theme:** What AI Is and Why It Matters
+## Day 1 (Wednesday) - Introduction & Foundations
+**Theme:** What is AI and Why AI?
 
 ### Focus
-Break down AI in the simplest and most relatable way. Remove fear, confusion, and myths.
+Break down AI in the simplest and most relatable way. Focus on removing fear and understanding the true advantages of adopting AI early.
 
 ### Topics
-- What artificial intelligence is (in simple terms)
-- Types of AI without technical complexity
-- Common misconceptions about AI
-- How AI is already part of everyday life
+- **What is AI?** (Explained in simple, non-technical terms)
+- **Why AI?** (Why it matters now and the cost of ignoring it)
+- **Advantages:** How AI gives a competitive edge to individuals and businesses
+- Common misconceptions and myths about AI
 - AI vs human work: reality vs fear
-- Different AI tools and what they are best for:
-  - ChatGPT
-  - Claude
-  - Google AI Studio
 
-### Live Demonstration
-Using ChatGPT to solve real-life tasks:
-- Writing emails
-- Generating ideas
-- Planning tasks
+### The Benefit (Why you need this)
+**Clarity and Confidence:** You will leave this session with a clear understanding of AI, free from confusing jargon. You'll see exactly how these tools can give you an immediate advantage in your daily life.
 
 ### Session Flow (2 Hours)
 - 6:00-6:15 PM: Welcome, expectations, and baseline poll
-- 6:15-6:50 PM: Core concepts + myths and realities
-- 6:50-7:25 PM: Tool walkthrough (ChatGPT, Claude, Google AI Studio)
-- 7:25-7:50 PM: Live demo + guided audience practice
-- 7:50-8:00 PM: Q&A + Day 2 preview
-
-### Outcome
-Participants will:
-- Understand AI clearly
-- Feel more confident engaging with AI
-- Recognize how AI applies to their daily life
+- 6:15-6:50 PM: What is AI & Why AI (Core concepts + myths)
+- 6:50-7:30 PM: The Advantages of AI & Real-world Impact
+- 7:30-7:50 PM: Open Discussion & Q&A
+- 7:50-8:00 PM: Day 2 preview
 
 ---
 
-## Day 2 (Thursday) - Use AI Daily
-**Theme:** How AI Makes Life Easier
+## Day 2 (Thursday) - AI Tools & Practical Uses
+**Theme:** Different AI Tools and What You Can Do With Them
 
 ### Focus
-Show immediate, practical value of AI in everyday work, study, and productivity.
+Show immediate, practical value of AI in everyday work, study, and productivity by exploring different tools.
 
 ### Topics
+- Setting up **free AI subscriptions** and navigating platforms
+- **Different AI tools** and what they are best for:
+  - ChatGPT (Ideation, writing)
+  - Claude (Analysis, large documents)
+  - Perplexity (Research)
+- **Different things you can do with AI:**
+  - Writing, research, and studying
+  - Designing simple visuals with Canva
 - Prompting basics: how to ask AI better questions
-- Using AI for writing, research, and studying
-- AI for workplace productivity
-- AI tools for students and professionals
-- Saving time and improving efficiency
-- Setting up free accounts and tools
+
+### The Benefit (Why you need this)
+**Reclaiming Time:** You will learn how to use the right tools for the right tasks, effectively saving hours of manual work every week and significantly boosting your personal productivity.
 
 ### Live Demonstration
-- Summarizing a PDF
-- Creating social media content
-- Designing simple visuals with Canva
+- Summarizing a complex PDF
+- Generating a week of social media content
+- Guided audience practice
 
 ### Session Flow (2 Hours)
-- 6:00-6:15 PM: Recap + prompt quality before/after examples
-- 6:15-6:50 PM: Prompt framework for beginners
-- 6:50-7:20 PM: Productivity and study workflows
+- 6:00-6:15 PM: Recap + Tool landscape
+- 6:15-6:45 PM: Setting up free AI subscriptions & navigating tools
+- 6:45-7:20 PM: Different things you can do with AI + Prompting
 - 7:20-7:50 PM: Live demos + audience prompt challenge
 - 7:50-8:00 PM: Q&A + Day 3 preview
 
-### Outcome
-Participants will:
-- Start using AI tools immediately
-- Improve personal productivity
-- Know how to get better outputs from AI
-
 ---
 
-## Day 3 (Friday) - Automate Tasks
-**Theme:** Working Smarter with AI
+## Day 3 (Friday) - Automating Workflows
+**Theme:** Working Smarter, Not Harder
 
 ### Focus
-Introduce automation as one of the biggest advantages of AI.
+Introduce automation to expand on "Different things you can do with AI", showing how to connect tools together.
 
 ### Topics
 - What automation is and why it matters
-- The role of automation in modern work
 - Identifying repetitive tasks that can be automated
-- Simple AI workflows for beginners
+- Simple no-code AI workflows for beginners
+- Connecting different AI tools to work together without human intervention
+
+### The Benefit (Why you need this)
+**Multiplying Effort:** You will see how to make AI work for you in the background. Instead of doing everything manually, you'll learn to set up systems that handle repetitive tasks automatically.
 
 ### Live Demonstration
-Building a simple workflow using n8n:
-- Form submission -> AI response
-- Auto follow-up message
+Building a simple workflow (e.g., using n8n or Make):
+- Form submission -> AI response -> Auto follow-up email
 
 ### Session Flow (2 Hours)
 - 6:00-6:15 PM: Recap + automation mindset
 - 6:15-6:45 PM: Mapping repetitive tasks to automations
 - 6:45-7:20 PM: Intro to no-code AI workflow design
-- 7:20-7:50 PM: n8n live build walkthrough
+- 7:20-7:50 PM: Live workflow build walkthrough
 - 7:50-8:00 PM: Q&A + Day 4 preview
-
-### Outcome
-Participants will:
-- Understand how to reduce manual work
-- See how AI can save time and improve efficiency
 
 ---
 
-## Day 4 (Saturday) - Build Something Simple
-**Theme:** From User to Builder
+## Day 4 (Saturday) - Technical Foundations
+**Theme:** Required Tools & Coding Essentials
 
 ### Focus
-Help beginners understand how AI tools work behind the scenes and make them feel capable of building simple things.
+Help beginners understand how AI tools work behind the scenes and introduce the technical building blocks in a highly accessible way.
 
 ### Topics
-- Beginner-friendly introduction to Python:
-  - Variables
-  - Functions
-  - APIs
-- What an API is and how AI apps connect
-- Free tools to get started:
-  - Visual Studio Code
-  - Jupyter Notebook
-  - Hugging Face
+- **Required tools** for building with AI:
+  - IDEs (e.g., Visual Studio Code, Jupyter Notebook)
+  - Data sources and models: **Hugging Face**
+  - Developer environments: **Google AI Studio**
+- **Coding essentials for AI in Python:**
+  - Variables, simple logic, and Functions
+  - What an API is and how AI apps connect to models
+
+### The Benefit (Why you need this)
+**Becoming a Builder:** You will demystify the technical side of AI. Instead of just consuming AI products, you will gain the foundational knowledge required to start building your own simple, custom AI solutions.
 
 ### Live Demonstration
-Choose one:
-- Build a simple AI chatbot
-- Build a text classification/sentiment analysis mini-project
+- Connecting to Google AI Studio via an API to build a simple Python script/chatbot.
 
 ### Session Flow (2 Hours)
 - 6:00-6:15 PM: Recap + builder mindset
-- 6:15-6:45 PM: Python/API essentials for non-technical learners
-- 6:45-7:15 PM: Tool setup and starter workflow
-- 7:15-7:50 PM: Live mini-build
+- 6:15-6:45 PM: Required tools (IDE, Hugging Face, Google AI Studio)
+- 6:45-7:20 PM: Python essentials & API basics for non-technical learners
+- 7:20-7:50 PM: Live API connection mini-build
 - 7:50-8:00 PM: Q&A + Day 5 preview
-
-### Outcome
-Participants will:
-- Understand the basics of how AI apps work
-- Feel less intimidated by technical tools
-- See that building with AI is accessible
 
 ---
 
-## Day 5 (Sunday) - Apply AI / Career Paths / Next Steps
-**Theme:** Turning Knowledge into Opportunity
+## Day 5 (Sunday) - Apply AI & Next Steps
+**Theme:** Where You Can Work & Opportunities
 
 ### Focus
-Show participants how to keep learning, apply their skills, and explore opportunities.
+Show participants how to apply their skills, explore career paths, and monetize their AI knowledge.
 
 ### Topics
+- **Where you can work:** Industries actively looking for AI skills
 - Different opportunities with AI:
-  - Freelancing
-  - Content creation
-  - AI-powered services
-  - Workplace leverage
-- Beginner-friendly ways to start
-- How to position yourself
-- Common mistakes to avoid
+  - Freelancing & Content creation
+  - Building AI-powered services
+  - Workplace leverage (getting promoted)
+- Beginner-friendly ways to start building a portfolio
 - What to learn next
+
+### The Benefit (Why you need this)
+**Career Growth & Income:** You will discover clear, actionable pathways to turn your new AI knowledge into real-world opportunities, whether you want to start a side hustle, land a new job, or excel in your current role.
 
 ### Live Demonstration
 Creating a simple beginner AI service:
-- CV review service
-- Content assistant
-- Productivity workflow
+- e.g., Setting up an automated CV review service or content generation offer.
 
 ### Session Flow (2 Hours)
-- 6:00-6:15 PM: Recap + opportunity landscape
-- 6:15-6:50 PM: Monetization and positioning basics
-- 6:50-7:25 PM: Beginner roadmap + mistake prevention
+- 6:00-6:15 PM: Recap + Where you can work
+- 6:15-6:50 PM: Monetization, freelancing, and career positioning
+- 6:50-7:25 PM: Beginner roadmap + portfolio building
 - 7:25-7:45 PM: Live service build demo
 - 7:45-8:00 PM: Final CTA, certificate guidance, community next steps
-
-### Outcome
-Participants will:
-- Understand practical next steps
-- See possible career and income opportunities
-- Feel motivated to keep learning
 
 ---
 
