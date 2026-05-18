@@ -113,7 +113,7 @@ Building a simple workflow (e.g., using n8n or Make):
 **Theme:** Required Tools & Coding Essentials
 
 ### Focus
-Help beginners understand how AI tools work behind the scenes and introduce the technical building blocks in a highly accessible way.
+Help beginners understand how AI tools work behind the scenes, introduce technical building blocks in an accessible way, and set up developer accounts for advanced self-paced practice.
 
 ### Topics
 - **Required tools** for building with AI:
@@ -123,18 +123,27 @@ Help beginners understand how AI tools work behind the scenes and introduce the 
 - **Coding essentials for AI in Python:**
   - Variables, simple logic, and Functions
   - What an API is and how AI apps connect to models
+- **Setup for Advanced Learning Guides:**
+  - Setting up a **Kaggle** account & completing phone verification
+  - Generating API keys in **Google AI Studio**
 
 ### The Benefit (Why you need this)
-**Becoming a Builder:** You will demystify the technical side of AI. Instead of just consuming AI products, you will gain the foundational knowledge required to start building your own simple, custom AI solutions.
+**Becoming a Builder:** You will demystify the technical side of AI. Instead of just consuming AI products, you will gain the foundational knowledge required to start building your own simple, custom AI solutions and prepare yourself for world-class technical learning pathways.
+
+> [!TIP]
+> **Recommended Practice:** After today's session, you are fully equipped to dive into **Day 1 & Day 2 of Kaggle's 5-Day Gen AI Intensive Course with Google** (Self-Paced)! Try their interactive Kaggle notebooks:
+> - **Prompting Fundamentals Codelab:** Practice advanced parameters and prompt formatting using Gemini 2.0.
+> - **Evaluation and Structured Data Codelab:** Learn to use autoraters and structured formats to evaluate model outputs.
 
 ### Live Demonstration
-- Connecting to Google AI Studio via an API to build a simple Python script/chatbot.
+- Connecting to Google AI Studio via Gemini 2.0 API to build a simple Python script/chatbot.
+- Walkthrough of Kaggle Notebooks setup and how to launch a free GPU-accelerated workspace.
 
 ### Session Flow (2 Hours)
-- 6:00-6:15 PM: Recap + builder mindset
-- 6:15-6:45 PM: Required tools (IDE, Hugging Face, Google AI Studio)
+- 6:00-6:15 PM: Welcome & Builder mindset
+- 6:15-6:45 PM: Required tools (IDE, Hugging Face, Google AI Studio) + Account setup guide
 - 6:45-7:20 PM: Python essentials & API basics for non-technical learners
-- 7:20-7:50 PM: Live API connection mini-build
+- 7:20-7:50 PM: Live API connection mini-build & Kaggle environment preview
 - 7:50-8:00 PM: Q&A + Day 5 preview
 
 ---
@@ -143,16 +152,18 @@ Help beginners understand how AI tools work behind the scenes and introduce the 
 **Theme:** Where You Can Work & Opportunities
 
 ### Focus
-Show participants how to apply their skills, explore career paths, and monetize their AI knowledge.
+Show participants how to apply their skills, explore career paths, monetize their AI knowledge, and transition into premium free learning paths to earn industry-recognized credentials.
 
 ### Topics
 - **Where you can work:** Industries actively looking for AI skills
-- Different opportunities with AI:
+- **Different opportunities with AI:**
   - Freelancing & Content creation
   - Building AI-powered services
   - Workplace leverage (getting promoted)
-- Beginner-friendly ways to start building a portfolio
-- What to learn next
+- **Beginner-friendly ways to start building a portfolio**
+- **Actionable Next Steps & External Learning Pathways:**
+  - Navigating the **Kaggle 5-Day Gen AI Intensive** (Self-Paced)
+  - Preparing for the **5-Day AI Agents: Intensive Vibe Coding Course** (June 15-19, 2026)
 
 ### The Benefit (Why you need this)
 **Career Growth & Income:** You will discover clear, actionable pathways to turn your new AI knowledge into real-world opportunities, whether you want to start a side hustle, land a new job, or excel in your current role.
@@ -160,13 +171,43 @@ Show participants how to apply their skills, explore career paths, and monetize 
 ### Live Demonstration
 Creating a simple beginner AI service:
 - e.g., Setting up an automated CV review service or content generation offer.
+- Showcase how to transition local agent prototypes "From Vibe to Live".
 
 ### Session Flow (2 Hours)
 - 6:00-6:15 PM: Recap + Where you can work
-- 6:15-6:50 PM: Monetization, freelancing, and career positioning
-- 6:50-7:25 PM: Beginner roadmap + portfolio building
-- 7:25-7:45 PM: Live service build demo
-- 7:45-8:00 PM: Final CTA, certificate guidance, community next steps
+- 6:15-6:45 PM: Monetization, freelancing, and career positioning
+- 6:45-7:15 PM: Beginner roadmap + portfolio building
+- 7:15-7:45 PM: Live service build demo & transition to advanced Google/Kaggle courses
+- 7:45-8:00 PM: Final CTA, certificate guidance, and community next steps
+
+---
+
+## Advanced Follow-up: Google & Kaggle Intensive Learning Paths
+
+To further your learning and build your developer portfolio, we highly recommend pursuing the following free courses developed by Google researchers and engineers:
+
+### 1. Kaggle 5-Day Gen AI Intensive Course (Self-Paced Guide)
+A comprehensive program focusing on the fundamental technologies and techniques behind Generative AI.
+* **Format:** Audio/Podcast summaries, technical whitepapers, and interactive Kaggle Notebook codelabs.
+* **Curriculum Breakdown:**
+  * **Day 1: Foundational Models & Prompt Engineering** (LLM evolution, transformers, fine-tuning, Gemini 2.0 API, structured output, and autoraters).
+  * **Day 2: Embeddings and Vector Databases** (RAG question-answering system, text similarity, neural classification networks with Keras).
+  * **Day 3: Generative AI Agents** (Function calling, SQL tool connections, Gemini Live API, LangGraph ordering agents).
+  * **Day 4: Domain-Specific LLMs** (Solving specialized problems, SecLM & MedLM, custom Gemini model tuning, Google Search grounding).
+  * **Day 5: MLOps for Generative AI** (Vertex AI, AgentOps, and the production-ready `google/agent-starter-pack` walkthrough).
+
+### 2. Kaggle 5-Day AI Agents: Intensive Vibe Coding Course (June 15 - 19, 2026)
+An upcoming live course focused on "Vibe Coding"—using natural language as the primary programming interface to build and scale autonomous agentic fleets.
+* **Key Features:** Live YouTube AMAs with Google experts, Discord collaboration, and a live portfolio-building capstone project.
+* **Curriculum Breakdown:**
+  * **Day 1: Introduction to Agents & Vibe Coding** (Moving beyond chatbots to autonomous natural language programming workflows).
+  * **Day 2: Agent Tools & Interoperability** (External APIs, code execution environments, and agent-to-agent communication).
+  * **Day 3: Context Engineering: Sessions, Skills & Memory** (Long context strategy, long-term memory, state, optimal token usage).
+  * **Day 4: Agent Quality & Security** (Rigorous testing, automated guardrails, quality evaluations, securing agent threat vectors).
+  * **Day 5: Prototype to Production ("From Vibe to Live")** (Scaling, managing, and observing production-ready fleets in the cloud).
+* **Capstone Challenge — Kaggriculture (June 19 - 30, 2026):**
+  > [!IMPORTANT]
+  > Design and deploy a fully autonomous AI agent in a competitive farming simulation. Navigate a shifting virtual economy, compete for limited resources, rise on the live leaderboard, and earn an exclusive **Kaggle Profile Certificate & Badge** plus official swag!
 
 ---
 
@@ -200,3 +241,4 @@ More details will be shared at the end of the session.
 - Reserve coding depth for Day 4 only; keep the demo lightweight.
 - Maintain at least 30-40% of session time for demonstration and interaction.
 - End each day with one simple action participants can complete before the next class.
+- Encourage all participants to sign up for Kaggle and Google AI Studio during Day 4, so they are ready for the follow-up intensives.

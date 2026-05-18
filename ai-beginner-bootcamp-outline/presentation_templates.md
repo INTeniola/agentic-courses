@@ -116,28 +116,29 @@ This document provides a template structure for the presentation slides for each
 - **Quick Review:** Automation and working smarter.
 
 **Slide 3: The Benefit: Becoming a Builder**
-- **Highlight:** Demystifying the technical side to create your own custom tools.
+- **Highlight:** Demystifying the technical side to create your own custom tools and set yourself up for premium developer pathways.
 
 **Slide 4: Required Tools for Builders**
 - **IDE:** Visual Studio Code / Jupyter Notebook (Where you write code).
 - **Models & Data:** Hugging Face (The app store for AI models).
-- **Environment:** Google AI Studio.
+- **Developer Environments:** Google AI Studio (API access) and **Kaggle** (Free GPU-powered coding sandboxes).
 
 **Slide 5: Coding Essentials (Python)**
 - **Concepts:** Variables (Boxes), Logic (Rules), Functions (Actions). Keep it extremely simple.
 
 **Slide 6: What is an API?**
-- **Concept:** The waiter at a restaurant (taking your request to the kitchen/AI model and bringing back the food/response).
+- **Concept:** The waiter at a restaurant taking your request to the kitchen (AI Model) and bringing back the food (response).
 
 **Slide 7: Live Mini-Build**
-- **Visual:** Let's connect to Google AI Studio using an API.
-- **Demo:** Show a simple Python script running.
+- **Visual:** Let's connect to Google AI Studio using Gemini 2.0 API.
+- **Demo:** Show a simple Python script running and a quick tour of a Kaggle Notebook environment.
 
-**Slide 8: Q&A**
-- **Prompt:** Questions on the technical setup.
+**Slide 8: Recommended Self-Paced Practice**
+- **Deep Dive:** Kaggle 5-Day Gen AI Intensive Course.
+- **Codelabs to Try Today:** Prompting Fundamentals & Structured Data Evaluation using Gemini API in Kaggle Notebooks.
 
 **Slide 9: Wrap-up & Day 5 Preview**
-- **Action Item:** Create a free Hugging Face or Google AI Studio account.
+- **Action Item:** Create a free Google AI Studio account, sign up for Kaggle, and **complete phone verification** (mandatory for running codelabs).
 
 ---
 
@@ -162,12 +163,16 @@ This document provides a template structure for the presentation slides for each
 **Slide 6: Live Service Build Demo**
 - **Demo:** Setting up a simple workflow for a beginner service (e.g., CV review).
 
-**Slide 7: Beginner Roadmap & Portfolio Building**
-- **Steps:** Learn -> Build small things -> Share online -> Offer as a service.
+**Slide 7: Beginner Roadmap & Next Steps**
+- **Next Milestone:** Go from Vibe to Live!
+- **Pathways:** 
+  1. Complete the *Kaggle 5-Day Gen AI Intensive* (Self-Paced).
+  2. Join the upcoming live *Kaggle 5-Day AI Agents: Intensive Vibe Coding Course with Google* (June 15-19, 2026).
 
-**Slide 8: Final Q&A & Certificate Guidance**
-- **Details:** How to claim the Agentic Labs - AI Fundamentals Certificate.
+**Slide 8: The Vibe Coding Agent Challenge**
+- **Capstone Highlight:** Kaggriculture (June 19-30, 2026).
+- **The Challenge:** Build an autonomous AI agent to manage a virtual farm, compete on leaderboards, and earn a **Kaggle Profile Certificate & Badge**!
 
 **Slide 9: Next Steps (Final CTA)**
 - **Offer:** Details on the AI Beginner Bundle to keep learning and building.
-- **Link:** QR Code and links to join the community.
+- **Resources:** Links/QR codes to register for Kaggle's AI Agents intensive and join the Discord community.
