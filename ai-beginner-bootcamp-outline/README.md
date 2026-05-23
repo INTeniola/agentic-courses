@@ -7,6 +7,16 @@
 - **Audience:** Absolute beginners, students, early-career professionals, and non-technical learners
 - **Certification:** Agentic Labs - AI Fundamentals Certificate (for participants who complete the program)
 
+## Live Demo Readiness
+For AWS-hosted delivery, use the setup materials in this folder before the first live session:
+
+- `SETUP_AWS_SAGEMAKER.md` - instructor setup guide for SageMaker Studio JupyterLab.
+- `requirements.txt` - Python packages required across the notebooks and optional live demos.
+- `lifecycle-config.sh` - optional SageMaker lifecycle script to install dependencies and create the bootcamp kernel.
+- `00_preflight_check.ipynb` - run this before each class to verify packages, notebook integrity, AWS access, S3 access, and optional model credentials.
+
+Instructor rule: every live cell should either run locally, be verified by `00_preflight_check.ipynb`, or have a tested simulated fallback.
+
 ## Program Goal
 This bootcamp helps beginners understand AI clearly, use it for everyday productivity, automate simple tasks, build a basic AI-powered solution, and identify practical next steps for career and income opportunities.
 
