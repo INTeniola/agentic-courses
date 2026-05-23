@@ -4,175 +4,171 @@ This document provides a template structure for the presentation slides for each
 
 ---
 
-## Day 1: Introduction & Foundations
+## Day 1: AI Foundations, Prompting & "Vibe Coding"
 
 **Slide 1: Title Slide**
 - **Headline:** Welcome to the AI Beginner Bootcamp
-- **Sub-headline:** Day 1 - What is AI and Why AI?
+- **Sub-headline:** Day 1 - AI Foundations, Prompting & "Vibe Coding"
 - **Visual:** Clean, modern tech graphic or logo.
 
 **Slide 2: Welcome & Expectations**
 - **Points:** What we will cover, interactive nature of the bootcamp.
 - **Poll:** How many of you have used AI today?
 
-**Slide 3: What is AI? (The Simple Version)**
-- **Concept:** Explain AI like an intern that can read, write, and analyze really fast.
-- **Key Takeaway:** It's not magic; it's just very smart software.
+**Slide 3: What is AI & LLMs?**
+- **Concept:** Explain LLMs like a highly capable intern that reads, writes, and processes language extremely fast.
+- **Key Takeaway:** It's not magic; it's a prediction engine powered by human language data.
 
-**Slide 4: Why AI? Why Now?**
-- **Points:** The cost of ignoring AI vs. the advantage of adopting it early.
-- **Visual:** Chart showing productivity growth with AI.
+**Slide 4: Introduction to Vibe Coding**
+- **Concept:** Moving from manual programming to natural language as the primary coding interface.
+- **Point:** How "vibe coding" lets anyone design workflows by describing what they want.
 
-**Slide 5: The True Advantages of AI**
-- **Points:** Speed, 24/7 availability, idea generation, and automation.
-- **Benefit Highlight:** "Clarity and Confidence - You will leave today knowing how AI gives you an edge."
+**Slide 5: Prompting Blueprint: The 4-Step Formula**
+- **Formula:** Role + Task + Context + Format.
+- **Example:** "Act as a copywriter, write a friendly welcome email, make it under 100 words, return as a markdown block."
 
-**Slide 6: Myths vs. Reality**
-- **Myth 1:** AI will take all our jobs. -> **Reality:** People *using* AI will replace people who don't.
-- **Myth 2:** AI is too technical. -> **Reality:** If you can text, you can use AI.
-
-**Slide 7: Open Discussion & Q&A**
-- **Prompt:** What's your biggest fear or question about AI?
-
-**Slide 8: Wrap-up & Day 2 Preview**
-- **Action Item:** Sign up for a free ChatGPT or Claude account before tomorrow.
-
----
-
-## Day 2: AI Tools & Practical Uses
-
-**Slide 1: Title Slide**
-- **Headline:** Day 2 - AI Tools & Practical Uses
-- **Sub-headline:** Different AI Tools and What You Can Do With Them
-
-**Slide 2: Recap of Day 1**
-- **Quick Review:** What is AI and why it matters.
-
-**Slide 3: The AI Tool Landscape**
-- **Tools:** ChatGPT (Writing/Ideation), Claude (Analysis), Perplexity (Research), Canva (Visuals).
-- **Setup:** Free AI subscriptions overview.
-
-**Slide 4: The Benefit: Reclaiming Time**
-- **Highlight:** How using the right tools can save you hours every week.
-
-**Slide 5: Different Things You Can Do With AI**
-- **Examples:** Writing emails, summarizing long documents, planning trips, creating social media posts.
-
-**Slide 6: Prompting 101: How to Talk to AI**
-- **Formula:** Role + Task + Context + Format (e.g., "Act as a marketer, write a tweet about AI, make it funny, use bullet points.")
+**Slide 6: Tuning Creativity: Temperature Parameters**
+- **Concept:** Explaining Temperature (0.0 = logical/robotic, 1.0 = creative/unpredictable) and Top-P concepts simply.
 
 **Slide 7: Live Demonstration Time**
-- **Visual:** Split screen or transition to browser.
-- **Tasks:** Summarizing a PDF and generating social content.
+- **Visual:** Split screen showing browser-based chat interfaces (Gemini/Claude).
+- **Task:** Live prompt challenge and observing the output variation by changing temperature parameters.
 
-**Slide 8: Audience Challenge & Q&A**
-- **Challenge:** Write your first prompt and share the result in the chat.
-
-**Slide 9: Wrap-up & Day 3 Preview**
-- **Action Item:** Use AI to do one real task at work or school tomorrow.
+**Slide 8: Wrap-up & Day 2 Preview**
+- **Action Item:** Sign up for a free Gemini or ChatGPT account.
 
 ---
 
-## Day 3: Automating Workflows
+## Day 2: Smarter Tools: Search Grounding, Embeddings, & Memory
 
 **Slide 1: Title Slide**
-- **Headline:** Day 3 - Automating Workflows
-- **Sub-headline:** Working Smarter, Not Harder
+- **Headline:** Day 2 - Smarter Tools
+- **Sub-headline:** Search Grounding, Embeddings, & Memory
 
-**Slide 2: Recap of Day 2**
-- **Quick Review:** Best tools and how to prompt.
+**Slide 2: Recap of Day 1**
+- **Quick Review:** Vibe coding and the prompting blueprint.
 
-**Slide 3: What is Automation?**
-- **Concept:** Setting up a system once so it runs by itself forever.
+**Slide 3: Search Grounding vs. Hallucinations**
+- **Concept:** Grounding links AI models to real-time search results to prevent "hallucinations" (confident lying).
+- **Visual:** Diagram of AI fetching a search result before answering.
 
-**Slide 4: The Benefit: Multiplying Effort**
-- **Highlight:** Making AI work in the background so you can focus on important things.
+**Slide 4: Understanding Embeddings & Similarity**
+- **Concept:** How AI represents concepts as mathematical coordinates (points) on a map to check how similar they are.
+- **Metaphor:** Words with similar meanings are close neighbors in a giant library.
 
-**Slide 5: Spotting Repetitive Tasks**
-- **Checklist:** Do you copy-paste data? Do you send the same email format daily? Do you manually sort files?
+**Slide 5: RAG: Let AI Read Your Files**
+- **Concept:** Retrieval-Augmented Generation. Feeding custom PDFs or documents into AI to ask specific questions about them.
 
-**Slide 6: Intro to No-Code Automation**
-- **Tools:** Mention tools like Make or n8n. No coding required, just connecting blocks.
+**Slide 6: Context Window & Memory**
+- **Concept:** Explaining the limits of session memory. AI has a "context window" (its short-term memory capacity).
 
-**Slide 7: Live Workflow Build**
-- **Visual:** Diagram of the workflow (Form -> AI -> Email).
-- **Demo:** Transition to live build.
+**Slide 7: Live Demonstration Time**
+- **Tasks:** Grounding Gemini with Google Search for live data; uploading a PDF to Claude or NotebookLM to extract clean summaries.
 
-**Slide 8: Q&A**
-- **Prompt:** What task in your life takes the most repetitive time?
+**Slide 8: Audience Challenge & Q&A**
+- **Challenge:** Upload a custom text or notes file and prompt AI to extract key learning highlights.
 
-**Slide 9: Wrap-up & Day 4 Preview**
-- **Action Item:** Identify one task you want to automate.
+**Slide 9: Wrap-up & Day 3 Preview**
+- **Action Item:** Identify one document or report at work/school you want to ask questions about.
 
 ---
 
-## Day 4: Technical Foundations
+## Day 3: Building Autonomous Agents & Tools
+
+**Slide 1: Title Slide**
+- **Headline:** Day 3 - Building Autonomous Agents & Tools
+- **Sub-headline:** Moving Beyond Chatbots to Digital Workers
+
+**Slide 2: Recap of Day 2**
+- **Quick Review:** Grounding, embeddings, and reading documents.
+
+**Slide 3: Chatbots vs. Autonomous Agents**
+- **Difference:** Chatbots wait for you to type; Agents plan, use tools, and make decisions autonomously.
+- **Structure:** LLM Brain + Memory + Planning + Tools.
+
+**Slide 4: Giving Agents Tools (Tool Interoperability)**
+- **Concept:** Letting AI run Python code, search the web, read databases, and call external APIs to get tasks done.
+
+**Slide 5: Multi-Agent Systems**
+- **Concept:** Building a team of specialized AI agents (e.g., Writer Agent + Editor Agent) that communicate to solve a task.
+
+**Slide 6: No-Code Visual Agent Design**
+- **Concept:** Designing custom agents using block-connecting interfaces (Make/n8n/Coze).
+
+**Slide 7: Live Workflow Build**
+- **Visual:** Flow diagram of an Agent (User Request -> Search DB -> Generate Answer -> Send Email).
+- **Demo:** Live build of a café order-taking agent.
+
+**Slide 8: Q&A**
+- **Prompt:** What repetitive digital task would you delegate to an autonomous agent?
+
+**Slide 9: Wrap-up & Day 4 Preview**
+- **Action Item:** Map out the steps of a workflow you want an agent to handle.
+
+---
+
+## Day 4: Technical Foundations & AI Studio APIs
 
 **Slide 1: Title Slide**
 - **Headline:** Day 4 - Technical Foundations
-- **Sub-headline:** Required Tools & Coding Essentials
+- **Sub-headline:** Connecting to AI Models with Code
 
 **Slide 2: Recap of Day 3**
-- **Quick Review:** Automation and working smarter.
+- **Quick Review:** Autonomous agents and visual tools.
 
 **Slide 3: The Benefit: Becoming a Builder**
-- **Highlight:** Demystifying the technical side to create your own custom tools and set yourself up for premium developer pathways.
+- **Highlight:** Transitioning from using pre-built web apps to calling models directly using code.
 
 **Slide 4: Required Tools for Builders**
-- **IDE:** Visual Studio Code / Jupyter Notebook (Where you write code).
-- **Models & Data:** Hugging Face (The app store for AI models).
-- **Developer Environments:** Google AI Studio (API access) and **Kaggle** (Free GPU-powered coding sandboxes).
+- **IDE:** VS Code or Jupyter Notebook (Where we write scripts).
+- **Developer Environments:** Google AI Studio (API access dashboard) and Hugging Face.
 
-**Slide 5: Coding Essentials (Python)**
-- **Concepts:** Variables (Boxes), Logic (Rules), Functions (Actions). Keep it extremely simple.
+**Slide 5: What is an API?**
+- **Concept:** The waiter taking your request to the kitchen (Gemini Model) and returning with the food (response).
 
-**Slide 6: What is an API?**
-- **Concept:** The waiter at a restaurant taking your request to the kitchen (AI Model) and bringing back the food (response).
+**Slide 6: Coding Essentials (Python)**
+- **Concepts:** Variables (storage boxes), Logic (if/else decisions), and Functions (reusable actions).
 
-**Slide 7: Live Mini-Build**
-- **Visual:** Let's connect to Google AI Studio using Gemini 2.0 API.
-- **Demo:** Show a simple Python script running and a quick tour of a Kaggle Notebook environment.
+**Slide 7: Fine-Tuning: Customizing Model Behavior**
+- **Concept:** The difference between Prompting (instructing), RAG (giving files), and Fine-Tuning (retraining a model on custom dataset styles).
 
-**Slide 8: Recommended Self-Paced Practice**
-- **Deep Dive:** Kaggle 5-Day Gen AI Intensive Course.
-- **Codelabs to Try Today:** Prompting Fundamentals & Structured Data Evaluation using Gemini API in Kaggle Notebooks.
+**Slide 8: Live Mini-Build**
+- **Visual:** Connecting to Google AI Studio using Gemini 2.0 API.
+- **Demo:** Show a simple 10-line Python script calling Gemini and adjusting parameters in code.
 
 **Slide 9: Wrap-up & Day 5 Preview**
-- **Action Item:** Create a free Google AI Studio account, sign up for Kaggle, and **complete phone verification** (mandatory for running codelabs).
+- **Action Item:** Create a free Google AI Studio account and generate your first API key.
 
 ---
 
-## Day 5: Apply AI & Next Steps
+## Day 5: Agent Quality, Security & Going Live
 
 **Slide 1: Title Slide**
-- **Headline:** Day 5 - Apply AI & Next Steps
-- **Sub-headline:** Where You Can Work & Opportunities
+- **Headline:** Day 5 - Agent Quality, Security & Going Live
+- **Sub-headline:** Building Secure and Production-Ready Solutions
 
 **Slide 2: Recap of Bootcamp Journey**
-- **Quick Review:** Day 1 to 4 summary.
+- **Quick Review:** Day 1 to 4 progress.
 
-**Slide 3: Where You Can Work with AI**
-- **Industries:** Marketing, Operations, Education, Freelance. Everyone needs AI skills.
+**Slide 3: Agent Quality & Evaluation**
+- **Concept:** Testing your agents systematically to make sure they perform consistently and don't make mistakes.
 
-**Slide 4: The Benefit: Career Growth & Income**
-- **Highlight:** Turning your new knowledge into a side hustle, promotion, or new job.
+**Slide 4: Agent Security & Threat Vectors**
+- **Concept:** Protecting agents from "Prompt Injection" (users tricking the agent into ignoring instructions).
+- **Solution:** Implementing strict system instructions and safety filters.
 
-**Slide 5: Freelancing & Building AI Services**
-- **Ideas:** AI content generation, automated CV review, productivity consulting.
+**Slide 5: From Vibe to Live**
+- **Concept:** Graduating your local code prototype into a governed, scalable, and observable cloud deployment.
 
-**Slide 6: Live Service Build Demo**
-- **Demo:** Setting up a simple workflow for a beginner service (e.g., CV review).
+**Slide 6: Monetization & AI Consulting**
+- **Ideas:** Automated customer support setup, custom document search pipelines, or visual workflow automation consulting.
 
-**Slide 7: Beginner Roadmap & Next Steps**
-- **Next Milestone:** Go from Vibe to Live!
-- **Pathways:** 
-  1. Complete the *Kaggle 5-Day Gen AI Intensive* (Self-Paced).
-  2. Join the upcoming live *Kaggle 5-Day AI Agents: Intensive Vibe Coding Course with Google* (June 15-19, 2026).
+**Slide 7: Roadmap & Portfolio Building**
+- **Steps:** Learn basics -> Build 3 tiny projects -> Package into a portfolio -> Offer services online.
 
-**Slide 8: The Vibe Coding Agent Challenge**
-- **Capstone Highlight:** Kaggriculture (June 19-30, 2026).
-- **The Challenge:** Build an autonomous AI agent to manage a virtual farm, compete on leaderboards, and earn a **Kaggle Profile Certificate & Badge**!
+**Slide 8: Final Q&A & Claiming your Agentic Labs Certificate**
+- **Details:** How to claim the Agentic Labs - AI Fundamentals Certificate.
 
 **Slide 9: Next Steps (Final CTA)**
-- **Offer:** Details on the AI Beginner Bundle to keep learning and building.
-- **Resources:** Links/QR codes to register for Kaggle's AI Agents intensive and join the Discord community.
+- **Offer:** Details on the AI Beginner Bundle (Mentorship, structured group challenges, and private community).
+- **Link:** QR Code to join the waitlist.

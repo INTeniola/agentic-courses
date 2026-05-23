@@ -12,202 +12,157 @@ This bootcamp helps beginners understand AI clearly, use it for everyday product
 
 ## Learning Outcomes (End of Bootcamp)
 By the end of Day 5, participants will be able to:
-- Explain AI in simple, practical language.
-- Use major AI tools confidently for real tasks.
-- Write better prompts for stronger AI outputs.
-- Identify and automate repetitive workflows.
-- Understand basic technical building blocks (Python, APIs, notebooks).
-- Create a simple AI-powered mini-project.
-- Define a clear personal next-step plan for growth and opportunities.
+- Explain AI and large models in simple, practical language.
+- Interact with AI using prompt engineering and **Vibe Coding** workflows.
+- Understand how AI uses search grounding, embeddings, and context memory.
+- Design and build autonomous AI agents using visual/no-code platforms.
+- Understand basic technical building blocks (Python, APIs, parameters, notebook environments).
+- Create a simple, secure AI-powered mini-project.
+- Define a clear personal roadmap to build and launch production-ready AI services.
 
 ---
 
-## Day 1 (Wednesday) - Introduction & Foundations
-**Theme:** What is AI and Why AI?
+## Day 1 (Wednesday) - AI Foundations, Prompting & "Vibe Coding"
+**Theme:** Natural Language as the New Coding Language
 
 ### Focus
-Break down AI in the simplest and most relatable way. Focus on removing fear and understanding the true advantages of adopting AI early.
+Break down AI and Large Language Models (LLMs) in the simplest and most relatable way. Focus on removing fear and mastering "Vibe Coding"—using natural language as your primary interface to command AI to read, write, and analyze.
 
 ### Topics
-- **What is AI?** (Explained in simple, non-technical terms)
-- **Why AI?** (Why it matters now and the cost of ignoring it)
-- **Advantages:** How AI gives a competitive edge to individuals and businesses
-- Common misconceptions and myths about AI
-- AI vs human work: reality vs fear
+- **What is AI and LLMs?** (Explained simply: an intern that reads and writes fast)
+- **Vibe Coding Workflows:** How to use natural language to direct AI systems
+- **Prompting Fundamentals:** The core blueprint (Role, Task, Context, Format)
+- **Fine-Tuning parameters:** Concept of Temperature (creativity vs. logic) and Top-P
+- Common misconceptions: AI vs. human collaboration
 
 ### The Benefit (Why you need this)
-**Clarity and Confidence:** You will leave this session with a clear understanding of AI, free from confusing jargon. You'll see exactly how these tools can give you an immediate advantage in your daily life.
+**Clarity and Confidence:** You will leave this session with a clear understanding of AI, free from confusing jargon. You'll master how to structure prompts to get optimal, reliable results every time.
+
+### Live Demonstration
+- Prompting tools in action (ChatGPT/Claude/Gemini).
+- Show how changing temperature parameters impacts response variety.
+- Interactive baseline prompt challenges.
 
 ### Session Flow (2 Hours)
 - 6:00-6:15 PM: Welcome, expectations, and baseline poll
-- 6:15-6:50 PM: What is AI & Why AI (Core concepts + myths)
-- 6:50-7:30 PM: The Advantages of AI & Real-world Impact
-- 7:30-7:50 PM: Open Discussion & Q&A
+- 6:15-6:50 PM: Intro to LLMs & Vibe Coding (Natural language workflows)
+- 6:50-7:30 PM: Prompting blueprint & parameter controls
+- 7:30-7:50 PM: Live Prompt Challenge & interactive Q&A
 - 7:50-8:00 PM: Day 2 preview
 
 ---
 
-## Day 2 (Thursday) - AI Tools & Practical Uses
-**Theme:** Different AI Tools and What You Can Do With Them
+## Day 2 (Thursday) - Smarter Tools: Search Grounding, Embeddings, & Memory
+**Theme:** Connecting AI to Data and Context
 
 ### Focus
-Show immediate, practical value of AI in everyday work, study, and productivity by exploring different tools.
+Understand how AI tools search, remember, and process custom files. We demystify the concepts of memory, context windows, and search grounding.
 
 ### Topics
-- Setting up **free AI subscriptions** and navigating platforms
-- **Different AI tools** and what they are best for:
-  - ChatGPT (Ideation, writing)
-  - Claude (Analysis, large documents)
-  - Perplexity (Research)
-- **Different things you can do with AI:**
-  - Writing, research, and studying
-  - Designing simple visuals with Canva
-- Prompting basics: how to ask AI better questions
+- **Search Grounding:** Connecting AI to search engines to prevent hallucinations
+- **Embeddings & Similarity:** How AI represents concepts as mathematical "points" to compare text (explained with non-technical metaphors)
+- **RAG (Retrieval-Augmented Generation):** Uploading custom documents and asking questions
+- **Context & Memory:** Short-term vs. long-term memory in AI chat sessions
 
 ### The Benefit (Why you need this)
-**Reclaiming Time:** You will learn how to use the right tools for the right tasks, effectively saving hours of manual work every week and significantly boosting your personal productivity.
+**Reclaiming Time & Trust:** You will learn how to feed custom data (PDFs, study notes, or reports) into AI securely, knowing how to verify facts and use AI for accurate, research-backed tasks.
 
 ### Live Demonstration
-- Summarizing a complex PDF
-- Generating a week of social media content
-- Guided audience practice
+- Grounding Gemini with Google Search to get real-time facts.
+- Building a simple text-similarity map visually.
+- Interrogating a long PDF/document using custom grounding.
 
 ### Session Flow (2 Hours)
-- 6:00-6:15 PM: Recap + Tool landscape
-- 6:15-6:45 PM: Setting up free AI subscriptions & navigating tools
-- 6:45-7:20 PM: Different things you can do with AI + Prompting
-- 7:20-7:50 PM: Live demos + audience prompt challenge
+- 6:00-6:15 PM: Recap + Session overview
+- 6:15-6:45 PM: Grounding vs. Hallucinations (Getting real-time facts)
+- 6:45-7:20 PM: Intro to Embeddings & RAG (How AI reads your files)
+- 7:20-7:50 PM: Live demo of document analysis & memory constraints
 - 7:50-8:00 PM: Q&A + Day 3 preview
 
 ---
 
-## Day 3 (Friday) - Automating Workflows
-**Theme:** Working Smarter, Not Harder
+## Day 3 (Friday) - Building Autonomous Agents & Tools
+**Theme:** Moving Beyond Chatbots to Digital Workers
 
 ### Focus
-Introduce automation to expand on "Different things you can do with AI", showing how to connect tools together.
+Learn the difference between simple chatbots and autonomous AI agents. Show how to connect AI to external tools and APIs to run tasks automatically.
 
 ### Topics
-- What automation is and why it matters
-- Identifying repetitive tasks that can be automated
-- Simple no-code AI workflows for beginners
-- Connecting different AI tools to work together without human intervention
+- **What is an Agent?** The brain (LLM), planning, memory, and tools
+- **Agent Tools:** Letting AI browse, write code, and call external services
+- **Multi-Agent Systems:** Getting different specialized agents to talk to each other
+- **Visual/No-Code Agent Building:** Connecting blocks to build workflow agents
 
 ### The Benefit (Why you need this)
-**Multiplying Effort:** You will see how to make AI work for you in the background. Instead of doing everything manually, you'll learn to set up systems that handle repetitive tasks automatically.
+**Multiplying Effort:** You will shift from typing commands one-by-one to building systems that execute complex, multi-step actions (e.g., booking/processing an order) automatically.
 
 ### Live Demonstration
-Building a simple workflow (e.g., using n8n or Make):
-- Form submission -> AI response -> Auto follow-up email
+- Building a visual ordering agent (e.g., using Make/n8n or custom agent builders) that takes a request, checks a database, and sends an automated follow-up.
+- Demonstration of an agentic chatbot using function calling.
 
 ### Session Flow (2 Hours)
-- 6:00-6:15 PM: Recap + automation mindset
-- 6:15-6:45 PM: Mapping repetitive tasks to automations
-- 6:45-7:20 PM: Intro to no-code AI workflow design
-- 7:20-7:50 PM: Live workflow build walkthrough
+- 6:00-6:15 PM: Recap + Agentic mindset
+- 6:15-6:45 PM: Core Agent components (Brain, Memory, Tools)
+- 6:45-7:20 PM: Visual flow design & tool connections
+- 7:20-7:50 PM: Live agent build walkthrough
 - 7:50-8:00 PM: Q&A + Day 4 preview
 
 ---
 
-## Day 4 (Saturday) - Technical Foundations
-**Theme:** Required Tools & Coding Essentials
+## Day 4 (Saturday) - Technical Foundations & AI Studio APIs
+**Theme:** Connecting to AI Models with Code
 
 ### Focus
-Help beginners understand how AI tools work behind the scenes, introduce technical building blocks in an accessible way, and set up developer accounts for advanced self-paced practice.
+Demystify the technical side of AI by connecting to Google AI Studio via Python. Introduce key developer tools in an accessible, metaphor-rich format.
 
 ### Topics
-- **Required tools** for building with AI:
-  - IDEs (e.g., Visual Studio Code, Jupyter Notebook)
-  - Data sources and models: **Hugging Face**
-  - Developer environments: **Google AI Studio**
-- **Coding essentials for AI in Python:**
-  - Variables, simple logic, and Functions
-  - What an API is and how AI apps connect to models
-- **Setup for Advanced Learning Guides:**
-  - Setting up a **Kaggle** account & completing phone verification
-  - Generating API keys in **Google AI Studio**
+- **Developer Environments:** Visual Studio Code, Jupyter Notebooks, and Google AI Studio
+- **API Basics:** The API as a messenger between your code and Google's AI brain
+- **Python for AI:** Simple variables, functions, and parameters
+- **Fine-Tuning:** The difference between prompting, RAG, and training/tuning a custom model
 
 ### The Benefit (Why you need this)
-**Becoming a Builder:** You will demystify the technical side of AI. Instead of just consuming AI products, you will gain the foundational knowledge required to start building your own simple, custom AI solutions and prepare yourself for world-class technical learning pathways.
-
-> [!TIP]
-> **Recommended Practice:** After today's session, you are fully equipped to dive into **Day 1 & Day 2 of Kaggle's 5-Day Gen AI Intensive Course with Google** (Self-Paced)! Try their interactive Kaggle notebooks:
-> - **Prompting Fundamentals Codelab:** Practice advanced parameters and prompt formatting using Gemini 2.0.
-> - **Evaluation and Structured Data Codelab:** Learn to use autoraters and structured formats to evaluate model outputs.
+**Becoming a Builder:** You will gain the basic vocabulary and environment setup to start building custom AI programs, laying the groundwork for professional development.
 
 ### Live Demonstration
-- Connecting to Google AI Studio via Gemini 2.0 API to build a simple Python script/chatbot.
-- Walkthrough of Kaggle Notebooks setup and how to launch a free GPU-accelerated workspace.
+- Generating a Gemini API Key in Google AI Studio.
+- Writing a 10-line Python script to send a prompt to Gemini and display the output.
+- Customizing parameters (temperature) directly in code.
 
 ### Session Flow (2 Hours)
 - 6:00-6:15 PM: Welcome & Builder mindset
-- 6:15-6:45 PM: Required tools (IDE, Hugging Face, Google AI Studio) + Account setup guide
-- 6:45-7:20 PM: Python essentials & API basics for non-technical learners
-- 7:20-7:50 PM: Live API connection mini-build & Kaggle environment preview
+- 6:15-6:45 PM: Google AI Studio & API credentials setup
+- 6:45-7:20 PM: Python essentials (variables, API calls) in plain language
+- 7:20-7:50 PM: Live script build & parameter tuning
 - 7:50-8:00 PM: Q&A + Day 5 preview
 
 ---
 
-## Day 5 (Sunday) - Apply AI & Next Steps
-**Theme:** Where You Can Work & Opportunities
+## Day 5 (Sunday) - Agent Quality, Security & Going Live
+**Theme:** Building Secure and Production-Ready AI Solutions
 
 ### Focus
-Show participants how to apply their skills, explore career paths, monetize their AI knowledge, and transition into premium free learning paths to earn industry-recognized credentials.
+Learn how to test AI agents for reliability, protect them from threat vectors (like prompt injection), and explore career or side-hustle paths to launch them.
 
 ### Topics
-- **Where you can work:** Industries actively looking for AI skills
-- **Different opportunities with AI:**
-  - Freelancing & Content creation
-  - Building AI-powered services
-  - Workplace leverage (getting promoted)
-- **Beginner-friendly ways to start building a portfolio**
-- **Actionable Next Steps & External Learning Pathways:**
-  - Navigating the **Kaggle 5-Day Gen AI Intensive** (Self-Paced)
-  - Preparing for the **5-Day AI Agents: Intensive Vibe Coding Course** (June 15-19, 2026)
+- **Agent Quality:** How to test and evaluate AI systems systematically
+- **Agent Security:** Guardrails, safety settings, and prompt injection prevention
+- **From Vibe to Live:** Graduate your prototype into a launchable, observable project
+- **Monetization & Portfolios:** Packaging and offering AI automation/consulting services
 
 ### The Benefit (Why you need this)
-**Career Growth & Income:** You will discover clear, actionable pathways to turn your new AI knowledge into real-world opportunities, whether you want to start a side hustle, land a new job, or excel in your current role.
+**Career Growth & Trust:** You will know how to build AI tools that are not only cool but also safe, reliable, and secure enough for businesses to pay for, creating immediate career leverage.
 
 ### Live Demonstration
-Creating a simple beginner AI service:
-- e.g., Setting up an automated CV review service or content generation offer.
-- Showcase how to transition local agent prototypes "From Vibe to Live".
+- Simulating a prompt injection attack and showing how to stop it with safety settings.
+- Launching and showcasing a simple beginner portfolio project.
 
 ### Session Flow (2 Hours)
-- 6:00-6:15 PM: Recap + Where you can work
-- 6:15-6:45 PM: Monetization, freelancing, and career positioning
-- 6:45-7:15 PM: Beginner roadmap + portfolio building
-- 7:15-7:45 PM: Live service build demo & transition to advanced Google/Kaggle courses
+- 6:00-6:15 PM: Recap + The Production mindset
+- 6:15-6:45 PM: Security, guardrails, and quality checks
+- 6:45-7:15 PM: Monetization pathways & service packaging
+- 7:15-7:45 PM: Live service launch demo (Vibe to Live)
 - 7:45-8:00 PM: Final CTA, certificate guidance, and community next steps
-
----
-
-## Advanced Follow-up: Google & Kaggle Intensive Learning Paths
-
-To further your learning and build your developer portfolio, we highly recommend pursuing the following free courses developed by Google researchers and engineers:
-
-### 1. Kaggle 5-Day Gen AI Intensive Course (Self-Paced Guide)
-A comprehensive program focusing on the fundamental technologies and techniques behind Generative AI.
-* **Format:** Audio/Podcast summaries, technical whitepapers, and interactive Kaggle Notebook codelabs.
-* **Curriculum Breakdown:**
-  * **Day 1: Foundational Models & Prompt Engineering** (LLM evolution, transformers, fine-tuning, Gemini 2.0 API, structured output, and autoraters).
-  * **Day 2: Embeddings and Vector Databases** (RAG question-answering system, text similarity, neural classification networks with Keras).
-  * **Day 3: Generative AI Agents** (Function calling, SQL tool connections, Gemini Live API, LangGraph ordering agents).
-  * **Day 4: Domain-Specific LLMs** (Solving specialized problems, SecLM & MedLM, custom Gemini model tuning, Google Search grounding).
-  * **Day 5: MLOps for Generative AI** (Vertex AI, AgentOps, and the production-ready `google/agent-starter-pack` walkthrough).
-
-### 2. Kaggle 5-Day AI Agents: Intensive Vibe Coding Course (June 15 - 19, 2026)
-An upcoming live course focused on "Vibe Coding"—using natural language as the primary programming interface to build and scale autonomous agentic fleets.
-* **Key Features:** Live YouTube AMAs with Google experts, Discord collaboration, and a live portfolio-building capstone project.
-* **Curriculum Breakdown:**
-  * **Day 1: Introduction to Agents & Vibe Coding** (Moving beyond chatbots to autonomous natural language programming workflows).
-  * **Day 2: Agent Tools & Interoperability** (External APIs, code execution environments, and agent-to-agent communication).
-  * **Day 3: Context Engineering: Sessions, Skills & Memory** (Long context strategy, long-term memory, state, optimal token usage).
-  * **Day 4: Agent Quality & Security** (Rigorous testing, automated guardrails, quality evaluations, securing agent threat vectors).
-  * **Day 5: Prototype to Production ("From Vibe to Live")** (Scaling, managing, and observing production-ready fleets in the cloud).
-* **Capstone Challenge — Kaggriculture (June 19 - 30, 2026):**
-  > [!IMPORTANT]
-  > Design and deploy a fully autonomous AI agent in a competitive farming simulation. Navigate a shifting virtual economy, compete for limited resources, rise on the live leaderboard, and earn an exclusive **Kaggle Profile Certificate & Badge** plus official swag!
 
 ---
 
@@ -241,4 +196,4 @@ More details will be shared at the end of the session.
 - Reserve coding depth for Day 4 only; keep the demo lightweight.
 - Maintain at least 30-40% of session time for demonstration and interaction.
 - End each day with one simple action participants can complete before the next class.
-- Encourage all participants to sign up for Kaggle and Google AI Studio during Day 4, so they are ready for the follow-up intensives.
+- Encourage all participants to sign up for Google AI Studio during Day 4, so they are ready for API-based development.
