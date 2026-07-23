@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>AI Agents Bootcamp - Day 1</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/dracula.min.css" id="theme">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-color: #282a36; /* Dracula bg */
+            --main-text-color: #f8f8f2; /* Dracula fg */
+            --accent-color-1: #8be9fd; /* Dracula cyan */
+            --accent-color-2: #ff79c6; /* Dracula pink */
+            --card-bg: rgba(45, 48, 62, 0.5);
+            --card-border: rgba(139, 233, 253, 0.25);
+        }
+
+        body {
+            background: var(--bg-color);
+            background-image:
+                radial-gradient(at 20% 25%, hsla(212, 90%, 50%, 0.3) 0px, transparent 50%),
+                radial-gradient(at 80% 20%, hsla(300, 90%, 60%, 0.3) 0px, transparent 50%),
+                radial-gradient(at 25% 80%, hsla(170, 80%, 55%, 0.3) 0px, transparent 50%),
+                radial-gradient(at 75% 75%, hsla(30, 90%, 60%, 0.3) 0px, transparent 50%);
+        }
+
+        .reveal {
+            font-family: 'Inter', sans-serif;
+            color: var(--main-text-color);
+        }
+
+        .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 900;
+            color: var(--main-text-color);
+            text-shadow: 0 0 10px rgba(139, 233, 253, 0.2);
+        }
+
+        .reveal .accent {
+            color: var(--accent-color-1);
+        }
+
+        .reveal .accent2 {
+            color: var(--accent-color-2);
+        }
+
+        .reveal .subtitle {
+            font-weight: 400;
+            color: var(--accent-color-1);
+            opacity: 0.9;
+        }
+
+        /* Glassmorphism Card */
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 1.5em;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            text-align: left;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            align-items: stretch;
+        }
+
+        .card-container .card {
+            flex: 1;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: var(--accent-color-1);
+            border-bottom: 1px solid var(--card-border);
+            padding-bottom: 0.5em;
+        }
+        
+        .card ul {
+            list-style-type: '✓ ';
+            padding-left: 20px;
+        }
+        
+        .card ul li {
+            padding-left: 10px;
+            margin-bottom: 0.5em;
+        }
+
+        .reveal pre code {
+            background: rgba(0,0,0,0.3);
+            border-radius: 10px;
+            padding: 20px;
+            font-size: 0.8em;
+            border: 1px solid var(--card-border);
+            line-height: 1.5em;
+        }
+
+        .reveal ul {
+            list-style-type: none;
+        }
+
+        .reveal ul li.styled-list-item {
+            background: rgba(255, 255, 255, 0.05);
+            margin-bottom: 10px;
+            padding: 10px 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color-1);
+        }
+        
+        .arrow {
+            font-size: 2em;
+            color: var(--accent-color-2);
+            align-self: center;
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- Slide 1: Title & Welcome -->
+            <section data-transition="zoom">
+                <h1 class="accent">AI Agents Bootcamp</h1>
+                <h2 class="subtitle">Day 1: Introduction to Autonomous Agents</h2>
+                <p style="margin-top: 2em;">Welcome! Let's move beyond chatbots and start building the future.</p>
+            </section>
+
+            <!-- Slide 2: The Shift -->
+            <section>
+                <h2>The Shift: From <span class="accent2">Passive</span> to <span class="accent">Active</span></h2>
+                <div class="card-container" style="margin-top: 40px;">
+                    <div class="card">
+                        <h3><span class="accent2">Passive Chatbots</span></h3>
+                        <ul>
+                            <li>Waits for your command</li>
+                            <li>Answers one question at a time</li>
+                            <li>Limited context and memory</li>
+                            <li>A simple tool</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3><span class="accent">Active Agents</span></h3>
+                        <ul>
+                            <li>Takes initiative to achieve a goal</li>
+                            <li>Plans and executes multi-step tasks</li>
+                            <li>Learns and adapts from actions</li>
+                            <li>A proactive partner</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 3: Anatomy of an Agent -->
+            <section>
+                <h2>Anatomy of an Agent</h2>
+                <div class="card-container" style="margin-top: 40px;">
+                    <div class="card">
+                        <h3>🧠 Brain</h3>
+                        <p>The core LLM (GPT-4, Gemini) that provides reasoning and decision-making.</p>
+                    </div>
+                    <div class="card">
+                        <h3>🛠️ Tools</h3>
+                        <p>The "hands" of the agent. APIs that allow it to search the web, write files, or send emails.</p>
+                    </div>
+                </div>
+                <div class="card-container" style="margin-top: 20px;">
+                    <div class="card">
+                        <h3>💾 Memory</h3>
+                        <p>Allows the agent to recall past interactions and information to inform future actions.</p>
+                    </div>
+                    <div class="card">
+                        <h3>🗺️ Planning</h3>
+                        <p>The ability to break down a complex goal into a sequence of smaller, manageable steps.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 4: ReAct Loop -->
+            <section>
+                <h2>The Core Engine: The <span class="accent">ReAct</span> Loop</h2>
+                <p>Agents work in a continuous cycle of Reasoning and Acting.</p>
+                <div class="card-container" style="margin-top: 40px; align-items: center;">
+                    <div class="card">
+                        <h3><span class="accent">Re</span>ason</h3>
+                        <p>The agent thinks: "What is my goal? What should I do next?"</p>
+                    </div>
+                    <div class="arrow">→</div>
+                    <div class="card">
+                        <h3><span class="accent2">Act</span></h3>
+                        <p>The agent uses a tool to execute its plan, like searching Google.</p>
+                    </div>
+                    <div class="arrow">→</div>
+                    <div class="card">
+                        <h3><span class="accent">Observe</span></h3>
+                        <p>The agent sees the result of its action and feeds it back into the loop.</p>
+                    </div>
+                </div>
+                <p style="margin-top: 2em;">This <span class="accent">Think-Act-Observe</span> cycle repeats until the goal is achieved.</p>
+            </section>
+
+            <!-- Slide 5: Code Spotlight -->
+            <section>
+                <h2>Code Spotlight: Building Your First Agent</h2>
+                <p>Conceptually, it's simpler than you think.</p>
+                <pre><code class="language-python" data-line-numbers="1-3|5-6|8-9">
+# 1. Define the Goal for the Agent
+goal = "Research top AI trends and write a summary."
+
+# 2. Give the Agent Tools to Act
+tools = [google_search_tool, file_writer_tool]
+
+# 3. Create & Run the Agent
+agent = Agent(goal=goal, tools=tools)
+result = agent.run()
+                </code></pre>
+            </section>
+
+            <!-- Slide 6: Google Search Grounding -->
+            <section>
+                <h2>Grounding in Reality with Tools</h2>
+                <p>Agents aren't all-knowing. They use tools to access live, real-world information.</p>
+                <div class="card" style="margin-top: 40px;">
+                    <h3><span class="accent">Google Search</span> Grounding</h3>
+                    <p>Agent's internal thought: "What are the latest GPU releases?"</p>
+                    <p class="arrow" style="font-size: 1.5em; text-align: center;">↓</p>
+                    <p><strong>Action:</strong> Calls `google_search("latest GPU releases")` tool</p>
+                    <p class="arrow" style="font-size: 1.5em; text-align: center;">↓</p>
+                    <p><strong>Observation:</strong> Receives real-time search results</p>
+                    <p class="arrow" style="font-size: 1.5em; text-align: center;">↓</p>
+                    <p><strong>Result:</strong> Provides an accurate, up-to-date answer, preventing "hallucination".</p>
+                </div>
+            </section>
+
+            <!-- Slide 7: Multi-Agent Collaboration -->
+            <section>
+                <h2>The Power of Teamwork: Multi-Agent Systems</h2>
+                <p>Complex tasks can be solved by a team of specialized agents collaborating.</p>
+                <div class="card-container" style="margin-top: 40px;">
+                    <div class="card">
+                        <h4>Manager Agent</h4>
+                        <p>Delegates tasks</p>
+                    </div>
+                    <div class="arrow">→</div>
+                    <div class="card">
+                        <h4>Research Agent</h4>
+                        <p>Gathers data</p>
+                    </div>
+                    <div class="arrow">→</div>
+                    <div class="card">
+                        <h4>Writing Agent</h4>
+                        <p>Drafts content</p>
+                    </div>
+                    <div class="arrow">→</div>
+                    <div class="card">
+                        <h4>Reviewer Agent</h4>
+                        <p>Checks for quality</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 8: Mini-Capstone -->
+            <section>
+                <h2>Your Mission: The <span class="accent">Mini-Capstone</span></h2>
+                <h3 class="subtitle">Build a Personal AI Research Assistant</h3>
+                <ul style="margin-top: 40px;">
+                    <li class="styled-list-item"><strong>Goal:</strong> Create an agent that takes a research topic.</li>
+                    <li class="styled-list-item"><strong>Action:</strong> It will autonomously use a web search tool to find relevant, up-to-date information.</li>
+                    <li class="styled-list-item"><strong>Output:</strong> It will analyze the findings and provide you with a concise, accurate summary.</li>
+                    <li class="styled-list-item"><strong>This is your project for the 5-day bootcamp!</strong></li>
+                </ul>
+            </section>
+
+            <!-- Slide 9: Recap & Next Steps -->
+            <section>
+                <h2>Day 1 Recap & Next Steps</h2>
+                <div class="card-container" style="margin-top: 40px;">
+                    <div class="card">
+                        <h3>Recap</h3>
+                        <ul>
+                            <li>Agents are proactive goal-achievers</li>
+                            <li>Core Anatomy: Brain, Tools, Memory, Planning</li>
+                            <li>The ReAct loop drives agent behavior</li>
+                            <li>Tools ground agents in reality</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Next Steps</h3>
+                        <ul>
+                            <li><strong>Tomorrow:</strong> We dive into the code!</li>
+                            <li>Set up your development environment</li>
+                            <li>Choose your "Brain" (the LLM)</li>
+                            <li>Make your first API call</li>
+                        </ul>
+                    </div>
+                </div>
+                <h3 style="margin-top: 2em;">Get Ready to Build!</h3>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            transition: 'slide',
+            backgroundTransition: 'fade'
+        });
+    </script>
+</body>
+</html>
