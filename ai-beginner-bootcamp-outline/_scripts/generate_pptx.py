@@ -54,7 +54,7 @@ def apply_slide_styling(slide, title, prs):
 def generate_slide_content(day_number, topic):
     prompt = f"""
     You are an expert curriculum designer for AgenticLabs.ng.
-    We are building a 5-Day "Universal Knowledge Worker" AI Bootcamp.
+    We are building a 5-Day "Second Brain" AI Bootcamp.
     
     Day {day_number} Topic: {topic}
     

@@ -1,6 +1,6 @@
 # AgenticLabs.ng — AI Beginner Bootcamp
 
-Welcome to the 5-Day AI Beginner Bootcamp repository. This course takes learners from passive users of AI to active directors of AI by building a **Universal Knowledge Worker**.
+Welcome to the 5-Day AI Beginner Bootcamp repository. This course takes learners from passive users of AI to active directors of AI by building a **Second Brain** AI Agent.
 
 ## 🚀 Course Goal
 Over 5 days, participants build an autonomous AI agent capable of planning, web searching, summarizing, and presenting information. This prepares them for real-world AI automation tasks.

@@ -1,53 +1,51 @@
 # Day 1 Video Transcript: Hire the Brain
 
-[Open on instructor, medium shot, warm lighting]
+[Open on instructor, centre frame, warm lighting]
 
-Welcome to Day One of the Universal Knowledge Worker Bootcamp. I am genuinely glad you are here, because over the next five days you are going to build something that most people still believe is out of reach for beginners. You are going to build an AI agent that reads, reasons, researches, and reports, all on your behalf. And here is the honest truth I want you to hear before we touch a single line of code. You do not need a computer science degree for this. You need curiosity, and you need to show up for five days. That is the entry fee.
+Welcome to Day One of the AgenticLabs Second Brain Bootcamp. My name is your instructor, and over the next five days, you and I are going to build something that most people still believe is out of reach for a beginner. We are going to build an autonomous AI agent that remembers what you tell it, thinks through problems on your behalf, and takes action without you holding its hand every step of the way.
 
-[Show slide 1: The Universal Knowledge Worker]
+If you have never written a line of code in your life, you are still in the right room. Take a breath. I have taught this to founders, students, civil servants, and complete beginners, and by Friday you will have something working that you can show your friends. That is a promise.
 
-Let us talk about what we are actually building. Imagine hiring a research assistant. You hand them a messy question like, find out what my competitors are charging and summarise it into a one page brief. A good assistant does not ask you for step by step instructions. They go away, they search, they read, they think, they come back with an answer. That is what we are building. Not a chatbot that waits for you to spoon feed it. A worker.
+[Show slide 1: Day 1 — Hire the Brain]
 
-[Show slide 2: Chatbot versus Agent]
+Today's topic is called Hire the Brain, and I chose that title very deliberately. Think about how a company works. When a business wants to get things done, it hires a person. That person has intelligence, but intelligence alone is not enough. The company also gives that person a job description, access to tools, and a way to report back on progress.
 
-So what is the difference between a chatbot and an agent? A chatbot is reactive. You speak, it replies, and the conversation ends there. It has a mouth, but no hands. An agent has both. An agent can decide to use a tool. It can search the web, open a file, call an API, run a calculation, and then look at what came back and decide what to do next. That single capability, the ability to take an action and learn from the result, is the entire revolution. Everything else we cover this week is just detail on top of that idea.
+An AI agent works exactly the same way. Today, we are doing the hiring. We are choosing the brain that will power your Second Brain agent, and we are setting up the workspace where that brain will live.
+
+[Show slide 2: What is an autonomous agent?]
+
+So let us answer the first big question. What actually is an autonomous agent, and how is it different from a chatbot?
+
+When you open a normal chatbot and ask a question, it gives you an answer. One question in, one answer out. It is a very smart conversation partner, but it is passive. It waits for you.
+
+An agent is different. An agent is given a goal, not a question. You might say, find me the three most recent articles on solar energy in West Africa and summarise them into a briefing note. A chatbot would tell you it cannot browse the internet. An agent would go and do it. It would break that goal into steps, use the tools available to it, check its own work, and come back with a finished product.
+
+The difference is not intelligence. The difference is autonomy.
 
 [Show slide 3: The Think, Act, Observe loop]
 
-Which brings us to the most important concept of today. I want you to write these three words down, because we will return to them every single day. Think. Act. Observe.
+Now, how does an agent actually pull that off? Every agent you will ever build, no matter how complex, runs on one simple cycle. We call it the Think, Act, Observe loop. Write those three words down, because everything else this week hangs on them.
 
-Think is where the agent reasons about the goal. It looks at your instruction and asks itself, what do I actually need in order to answer this, and what should I do first?
+Step one is Think. The agent looks at the goal you gave it and asks itself, what is the very next step I need to take? It reasons. It plans. It picks a direction.
 
-Act is where the agent reaches into the world. It picks one tool and uses it. Maybe it runs a search. Maybe it reads a document you uploaded.
+Step two is Act. The agent uses a tool. That tool might be a web search, a calculator, a database, or a file on your computer. This is the moment the agent reaches out and touches the world.
 
-Observe is where the agent looks honestly at the result. Did that work? Did I get what I needed? If yes, it moves forward. If no, it adjusts and tries something else.
+Step three is Observe. The agent looks at what came back from that action. Did the search return useful results? Did the file open correctly? Was there an error?
 
-[Show slide 4: The loop animating in a circle]
+And then the loop repeats. It thinks again, acts again, observes again, over and over, until the goal is complete. That is it. That is the entire secret. Every impressive agent demo you have ever seen online is just this loop, running fast.
 
-And then it loops. Think, act, observe. Think, act, observe. Around and around until the goal is met. That is it. That is the machinery behind every impressive agent demonstration you have ever seen online. It is not magic. It is a loop with good judgement inside it.
+[Switch to screen recording: Google AI Studio homepage]
 
-Now, here is why today is called Hire the Brain. A loop is useless without something intelligent sitting at the centre making decisions. That intelligence is the model, and today we are going to hire ours. We will be using Google AI Studio and the Gemini family of models, because the free tier is genuinely generous, the setup takes minutes, and it is powerful enough to run everything we build this week.
+Alright, let us get practical. Open your browser and go to Google AI Studio. Sign in with any Google account. You do not need a paid plan to follow this bootcamp, and you do not need a credit card.
 
-[Switch to screen recording: Google AI Studio home page]
+[Highlight the Get API Key button]
 
-Follow along with me. Open your browser and go to Google AI Studio. Sign in with a standard Google account. You will land on a workspace that looks a little like a chat window with extra controls on the side. Do not be intimidated by the panels. We only care about three things today.
+On the left side of your screen, look for the option that says Get API Key. Click it, then select Create API Key. Google will generate a long string of characters for you. That string is the key to your agent's brain. Copy it, and paste it somewhere safe on your device, like a plain text file. Please do not share it publicly or post it in the community chat. Treat it like your bank PIN.
 
-[Highlight the prompt area]
+[Return to instructor on camera]
 
-First, the prompt area. This is where we talk to the model. Let us type a simple instruction and watch it respond, just to confirm everything is alive.
+That single key is what connects the code we write to the intelligence that powers it. Tomorrow, on Day Two, we will write our first few lines of Python and watch your agent think out loud for the very first time.
 
-[Highlight system instructions field]
+Your homework tonight is simple. Get your API key created and saved. Then post in the community channel and tell us one task you want your Second Brain to take off your plate this week.
 
-Second, system instructions. This is where we tell the model who it is. This one field is how you turn a general model into a specialist. Type in something like, you are a careful research analyst who always cites sources.
-
-[Highlight the Get API key button]
-
-Third, and most importantly, find the button that says Get API key. Click it, create a key in a new project, and copy it somewhere private. Treat that key like your bank card PIN. Never post it in a screenshot, never paste it in a public chat.
-
-[Cut back to instructor]
-
-That key is your agent's employment contract. Guard it.
-
-Your homework for today is short. Get your key working, and write one system instruction that defines the personality of your future assistant. Bring it to Day Two, because tomorrow we give this brain its hands. We start building tools.
-
-Well done for starting. I will see you tomorrow.
+You have officially hired the brain. Tomorrow, we put it to work. I will see you on Day Two.

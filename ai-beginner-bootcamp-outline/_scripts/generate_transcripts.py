@@ -25,7 +25,7 @@ client = Anthropic(
 def generate_transcript(day_number, topic, focus):
     prompt = f"""
     You are writing the official video presentation script for an AI instructor at AgenticLabs.ng.
-    This is for a 5-Day Bootcamp where students build a "Universal Knowledge Worker" AI Agent.
+    This is for a 5-Day Bootcamp where students build a "Second Brain" AI Agent.
     
     Day {day_number} Topic: {topic}
     Focus: {focus}

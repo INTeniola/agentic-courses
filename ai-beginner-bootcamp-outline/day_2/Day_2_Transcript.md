@@ -1,65 +1,53 @@
 # Day 2 Video Transcript: Give it Hands
 
-[Open on instructor, facing camera]
+[Show slide 1: Day 2 — Give It Hands]
 
-Welcome back to Day Two of the Universal Knowledge Worker Bootcamp. If you completed yesterday's build, take a moment to appreciate what you did. You gave your agent a brain. You gave it a personality, a system prompt, and the ability to hold a conversation. That is genuinely impressive for one day of work.
+Welcome back to Day 2 of the Second Brain Bootcamp. If you are here, it means you survived Day 1, and more importantly, it means you built something real. Take a moment to appreciate that. Yesterday, you gave your agent a brain. Today, we give it hands.
 
-But today, we confront a hard truth about that brain.
+[Show slide 2: Recap of Day 1]
 
-[Show slide one: a brilliant professor sitting alone in a windowless room]
+Let us quickly remember where we stopped. Yesterday, we connected to a language model and wrapped it in a simple loop so it could hold a conversation and remember what you told it within that session. It could reason. It could summarize. It could explain things back to you in your own words. That was the brain.
 
-Imagine the most brilliant professor you have ever met. She has read millions of books. She can reason, summarize, and explain almost anything. Now imagine we lock her in a room with no windows, no phone, and no internet. You slide a question under the door: what is the exchange rate today? What did the Central Bank announce this morning? Is my flight delayed?
+But here is the honest truth about that brain. It is trapped. Everything your agent knows was frozen at the moment its training finished. Ask it what happened in the news this morning, or what the current exchange rate is, or who won a match last night, and it will either guess confidently or apologize politely. Neither of those is useful.
 
-She cannot answer. Not because she is unintelligent, but because she is disconnected. Her knowledge stopped on the day her training ended.
+[Show slide 3: A brain in a jar]
 
-That is your agent right now. Brilliant, but trapped.
+Think of it like a brilliant professor locked inside a windowless room. Extremely intelligent. Completely disconnected. Today, we open a window. In agent language, we call that window a tool.
 
-[Cut back to instructor]
+[Show slide 4: What is a tool?]
 
-Today we open the door. Today, we give it hands.
+A tool is simply a function your agent is allowed to call. That is it. It could be a web search. It could be a calculator. It could be a weather lookup, a database query, or an email sender. You write a normal function in code, you describe what it does in plain English, and you hand that description to the model.
 
-[Show slide two: the words Tool Use in large text]
+Now here is the part that makes people smile the first time they see it. The model does not execute the function itself. It cannot. What it does is decide. It looks at your question, it looks at the list of tools available, and it says, I think I need the search tool for this, and here is what I want to search for. Your code then runs that search, collects the result, and hands it back to the model. The model reads the fresh information and writes the final answer.
 
-In agent engineering, the word for a hand is a tool. A tool is simply a function, a small piece of code, that your agent is allowed to call when it decides it needs help from the outside world. A web search tool. A calculator. A weather lookup. A database query. Anything you can write in code, your agent can learn to reach for.
+Read the question. Pick the tool. Call the tool. Read the result. Answer. That loop is the heart of every serious AI agent you have ever heard about.
 
-Here is the part that surprises most beginners. You do not tell the agent when to use the tool. You describe the tool, and the agent decides.
+[Show slide 5: The agent loop diagram]
 
-[Show slide three: the loop diagram with four boxes labelled Thought, Action, Observation, Answer]
+Let me point out something crucial before we touch code. The description you write for your tool is not decoration. It is instruction. The model chooses tools based on how you describe them. If you write a vague description like handles stuff, your agent will be confused. If you write something clear, like search the live web for current events, news, prices, and any information after the training cutoff, your agent becomes sharp and decisive. Write your descriptions like you are briefing a new intern on their first day.
 
-This is the loop that powers every serious AI agent in production today. First, Thought. The agent reads your question and reasons about whether it can answer from memory. Second, Action. If it cannot, it selects a tool and writes the input for it, for example a search query. Third, Observation. Your code runs the tool and hands the result back. Fourth, Answer. The agent reads the fresh information and composes a proper response.
+[Switch to screen recording]
 
-And here is the beautiful part. That loop can repeat. Search, read, search again, refine, then answer. That repetition is the difference between a chatbot and an agent.
+Alright, let us build. On your screen you can see the project from yesterday. First, we are going to sign up for a search provider and grab an API key. I am using a free tier here, so no card is required. Notice that I am putting that key inside my environment file, never directly in my code. Say it with me. Keys live in environment variables. Always.
 
-[Switch to screen recording, code editor open]
+Now we define our search function. Look how ordinary this is. It takes a query string, it calls the search service, and it returns the top results as clean text. There is no magic here. It is regular code.
 
-Let us build it. In your project folder, we are creating a new file for tools. We will start with a web search tool using a search API designed for agents. You will sign up, copy your key, and store it safely in your environment file, never inside your code and never pushed to a public repository. Say that with me: keys live in the environment.
+Next, we register it with the agent. We give it a name, a clear description, and we tell the model what input it expects. Then we pass the tool list into our agent when we create it.
 
-Now watch this function carefully. It takes one input, a query string. It calls the search service. It returns clean text. That is all. A tool is not magic. It is a normal function.
+Let us test. I will ask, what are the top technology headlines today?
 
-[Zoom in on the description line above the function]
+Watch the terminal carefully. Do you see that line? The model just requested the search tool and passed in its own query. It wrote that query by itself. Now our code runs the search, returns the results, and there it is. A fresh, current, accurate answer with today's information.
 
-Now, the single most important line in this entire lesson. This description. This docstring. This is what your agent actually reads when it is deciding whether to use the tool. If you write something vague like "does searching", your agent will use it badly. If you write "Search the live internet for current events, recent news, prices, and any information after the training cutoff", your agent will use it precisely.
+[Switch back to camera]
 
-Tool descriptions are prompt engineering. Treat them with respect.
+Pause here and let that sink in. Your agent just reached outside itself, gathered new information from the live internet, and reasoned over it. That is no longer a chatbot. That is an agent.
 
-[Switch to terminal, run the agent]
+[Show slide 6: Today's assignment]
 
-Let us register the tool with our agent and run it. I will ask a question no language model could possibly know from memory. Watch the logs.
+Your homework. First, get web search working end to end. Second, add one more tool of your choice, something as simple as a calculator or a date function. Third, and this is the fun part, ask your agent a question that forces it to use both tools in one answer.
 
-There. Do you see it? Thought. Then Action, calling web search with a query it wrote by itself. Then Observation, real results flowing back. Then a clean, grounded answer with the source.
+Post your terminal screenshot in the community channel. I read every single one.
 
-[Pause, cut back to instructor]
+Tomorrow, on Day 3, we solve the memory problem properly. Your agent will start remembering you across sessions, not just within one conversation.
 
-Take a breath. Your agent just reached into the live world and pulled back the truth. Yesterday it could only talk. Today it can act.
-
-[Show slide four: Your Assignment]
-
-Your assignment. First, get the web search tool running end to end. Second, add one more tool of your own choosing, perhaps a calculator or a currency converter. Third, and this is the fun part, ask your agent a question that forces it to use both tools in a single answer. Post your terminal output in the community channel. I want to see those loops.
-
-One warning before you go. Tools fail. The internet times out. Keys expire. Wrap your tool code in error handling and return a friendly message instead of crashing. Professional agents do not panic. They report and continue.
-
-[Instructor smiles]
-
-Tomorrow, on Day Three, we give your agent a memory of its own documents, so it can answer questions about your files, your reports, your business. Hands today. Long term memory tomorrow.
-
-Go build. I will see you in the next lesson.
+Excellent work today. Go give your agent some hands. I will see you tomorrow.

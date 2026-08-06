@@ -1,53 +1,65 @@
 # Day 4 Video Transcript: Quality Control
 
-[Open on instructor, centre frame]
+[Open on instructor, facing camera]
 
-Welcome back to Day Four of the AgenticLabs Bootcamp. Take a moment and look at what you have already built. On Day One you understood what an agent really is. On Day Two you gave it a brain and a personality. On Day Three you handed it tools and memory, and it started doing real work for you. That is genuinely impressive, and you should feel good about it.
+Welcome back to Day Four of the AgenticLabs Second Brain Bootcamp. Take a moment and look at what you have already built. On Day One you had an idea. Today you have a working agent that ingests your notes, stores them as embeddings, retrieves the right chunks, and answers your questions in your own words. That is a real engineering achievement, and you should be proud of it.
 
-But today we do something that separates hobby projects from professional systems. Today we talk about quality control.
+But here is the honest truth that separates a demo from a product. A demo works when you are watching. A product works when you are not. Today we make your Second Brain trustworthy. Today is Quality Control.
 
-[Show slide 1: Day Four – Quality Control]
+[Show slide one: The three pillars of Quality Control — Temperature, Guardrails, Evaluation]
 
-Here is the honest truth about AI agents. A working agent is easy. A trustworthy agent is hard. Anyone can get a model to respond. The real skill is getting it to respond correctly, consistently, and safely, even when nobody is watching. That is what today is about, and by the end of this session your Universal Knowledge Worker will be far more reliable than it was this morning.
+We are going to cover three things. First, the temperature parameter, which controls how your agent thinks. Second, guardrails, which control what your agent is allowed to do. And third, evaluation, which tells you whether any of it is actually working.
 
-Let us start with a dial you have probably heard of but may not fully understand. Temperature.
+Let us start with temperature.
 
-[Show slide 2: The Temperature Dial]
+[Show slide two: A simple dial, from zero on the left to one on the right]
 
-Think of temperature as a creativity dial on your model. It usually runs from zero to one, and sometimes higher. When you set temperature close to zero, the model becomes focused and predictable. Ask it the same question ten times and you will get almost the same answer ten times. When you push temperature higher, toward zero point eight or one, the model becomes more adventurous. It takes more risks with word choice, it explores unusual ideas, and its answers vary each time.
+Every time your language model generates a word, it is choosing from a list of possible next words, each with a probability. Temperature is the dial that decides how adventurous that choice is. Turn the dial down toward zero, and the model almost always picks the most likely word. The output becomes focused, consistent, and repeatable. Turn the dial up toward one, and the model starts considering less likely options. The output becomes more varied, more surprising, more creative.
 
-Now here is the part beginners often get wrong. Higher temperature is not better, and lower temperature is not safer in every case. It depends entirely on the job.
+Now, which one do you want for a Second Brain? Think about it for a second. Your agent's job is to tell you what is actually in your notes. It is not writing poetry. It is not brainstorming startup names. It is reporting facts. So we want a low temperature. For retrieval-based question answering, I recommend starting at zero point one or zero point two.
 
-[Switch to screen recording: temperature comparison in the notebook]
+[Switch to screen recording: the agent code, highlighting the temperature setting]
 
-Watch this. I am asking our agent to summarise a financial report at temperature zero point one. Notice the output. Clean, factual, tightly anchored to the source document. Now the exact same prompt at temperature zero point nine. See the difference? More colourful language, more interpretation, and if you look closely, a claim that is not actually in the document. That is the trade-off in one screen.
+Here in our generation function, you can see the temperature parameter. Right now it may be sitting at the default, which is often zero point seven. I want you to change it to zero point two and then run the same question three times.
 
-So here is your practical rule. For extraction, summarisation, data handling, and anything involving numbers or compliance, keep temperature low. For brainstorming, drafting marketing copy, or generating ideas, raise it. Your Universal Knowledge Worker does both kinds of jobs, which means you may want different temperature settings for different tools inside the same agent. We will implement exactly that in today's lab.
+[Show side by side output comparison]
 
-[Show slide 3: Guardrails]
+Notice what happened. At the higher temperature, the answers drift. The agent adds flourishes. Sometimes it invents a detail that is not in your notes at all. At zero point two, the answers are tight, consistent, and grounded. That consistency is not boring. That consistency is trust.
 
-Next, guardrails. A guardrail is simply a rule that constrains what your agent is allowed to do or say. Think of the barriers on the Third Mainland Bridge. They do not slow the traffic down. They stop cars from going into the lagoon.
+[Return to instructor]
 
-We will build three types today. First, input guardrails, which check the user's request before it ever reaches the model. If someone asks your finance assistant for medical advice, you catch it at the door. Second, output guardrails, which inspect the agent's answer before the user sees it. Here we check for hallucinated figures, missing citations, or leaked private data. Third, scope guardrails, which live in your system prompt and clearly define what the agent must refuse.
+Now, temperature alone is not enough. Even a low temperature model will confidently answer a question it has no information about. That is where guardrails come in.
 
-[Switch to screen recording: adding a validation function]
+[Show slide three: Guardrails checklist]
 
-Notice that this guardrail is just a small function. It is not magic and it is not complicated. It reads the output, checks it against a rule, and either approves it or sends it back for a retry. That is the entire concept. Simple code, enormous impact on reliability.
+A guardrail is simply a boundary you build into your system so the agent fails safely instead of failing loudly. We are going to add three today.
 
-[Show slide 4: Evaluation – How Do You Know It Works?]
+The first is the grounding instruction. In your system prompt, you will tell the agent plainly: answer only using the context provided. If the context does not contain the answer, say that you do not know. Do not guess.
 
-Finally, evaluation. And this is the discipline that will make you stand out professionally.
+The second is the fallback response. Instead of leaving that to chance, give your agent an exact sentence to use, something like: I could not find that information in your notes. That single line turns a hallucination into a helpful signal.
 
-Right now, most people test their agents by vibes. They type a question, read the answer, and think, yes, that looks fine. That is not engineering. That is hoping.
+The third is scope control. Your Second Brain is a notes assistant. If someone asks it to write malicious code or wander far outside its purpose, it should politely decline and redirect.
 
-Instead, we build a small evaluation set. Twenty test questions with known correct answers. Then we score our agent on three things. Accuracy, meaning did it get the facts right. Groundedness, meaning did it stick to the source material instead of inventing. And format compliance, meaning did it follow the structure we asked for.
+[Switch to screen recording: updating the system prompt with the three guardrails]
 
-Run that set before and after every change you make. Suddenly you are not guessing anymore. You have evidence.
+Watch how few lines this takes. Guardrails are not complicated engineering. They are clear thinking, written down.
 
-[Return to instructor, centre frame]
+[Return to instructor]
 
-So today's mission is clear. Tune your temperature per task, wrap your agent in guardrails, and build your first evaluation set.
+Finally, evaluation. This is the skill that will make you stand out.
 
-Take your time with the lab. This is the day your project becomes something you can confidently put in front of a client or an employer.
+[Show slide four: The golden question set]
 
-I will see you in Day Five, where we deploy. Let us get to work.
+Create a simple table with ten questions. Five should have clear answers inside your notes. Three should be questions your notes only partially cover. And two should be questions your notes definitely do not cover. Now run all ten and score each answer on three things: Is it correct? Is it grounded in the retrieved text? Did it refuse appropriately when it should have?
+
+That is your baseline. Every time you change a prompt, a chunk size, or a temperature setting, you rerun those ten questions. If the score goes up, keep the change. If it goes down, revert. That is how professional AI teams work, and now it is how you work.
+
+[Show slide five: Today's assignment]
+
+Your assignment: lower your temperature, add all three guardrails, and build and run your ten question evaluation set. Post your before and after scores in the community channel.
+
+[Return to instructor, closing]
+
+You are no longer just building something that works. You are building something you can defend. Tomorrow, on Day Five, we deploy your Second Brain and put it in front of real users.
+
+Excellent work today. I will see you tomorrow.

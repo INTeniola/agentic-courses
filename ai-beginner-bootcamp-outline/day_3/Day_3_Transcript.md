@@ -1,57 +1,51 @@
 # Day 3 Video Transcript: Give it Memory
 
-[Open on instructor, centered, warm lighting]
+[Open on instructor, facing camera]
 
-Welcome back to Day Three of the Universal Knowledge Worker Bootcamp. Take a moment to appreciate where you are right now. On Day One, you built an agent that could think. On Day Two, you gave it tools, so it could actually go out and do things in the world. Today, we fix the one thing that has probably been quietly frustrating you since you started testing your agent.
+Welcome back to Day 3. Take a second and look at what you have already built. On Day 1 you stood up a working agent that could answer questions. On Day 2 you gave it a knowledge base, so it could pull real information out of your own notes and documents. That is genuinely impressive work for two days, and I want you to sit with that for a moment before we go further.
 
-Your agent has amnesia.
+But if you have been testing your agent, you have probably noticed something frustrating.
 
-[Show slide 1: The words "Give It Memory" over a simple brain icon]
+[Show slide one, titled The Goldfish Problem]
 
-Here is what I mean. You ask your agent, "Summarize this report for me." It does a beautiful job. Then you follow up with, "Now make it shorter." And your agent responds with something like, "Make what shorter?" It has no idea what you are talking about, because the moment it finished that first response, everything vanished. Every conversation starts from zero.
+You ask your agent, what did I write about project deadlines last week. It gives you a solid answer. Then you follow up with, can you summarize that in three bullet points. And it has no idea what you are talking about. Every single message starts from zero. Your agent has knowledge, but it has no continuity. We call this the goldfish problem, and today we fix it.
 
-This is not a bug in your code. This is simply how large language models work by default. They are stateless. Each request is a completely fresh start, like meeting someone for the first time, over and over again.
+[Show slide two, titled Two Kinds of Memory]
 
-[Show slide 2: Two speech bubbles, the second one with a large question mark]
+Here is the key idea, and it is simpler than most people expect. Your agent needs two different kinds of memory, and they do different jobs.
 
-So today, we are building memory. And I want to reassure you before we even open the editor: this is far simpler than most beginners expect. Memory is not magic. Memory is a list.
+The first is long term memory. That is what you built yesterday. Your documents, your notes, your knowledge base. It is stable, it is searchable, and it does not change much from minute to minute.
 
-[Switch to screen recording, code editor open]
+The second is short term memory, and that is today's work. Short term memory is the conversation itself. It is the running thread of what you just said, what the agent just replied, and what the two of you are currently working on together. In practice, we call this a session.
 
-Let me show you the core idea. When you send a message to your model, you are not really sending one message. You are sending a list of messages, and each message has two parts: a role and some content. The role tells the model who is speaking. It might be system, which sets the personality and rules. It might be user, which is your human. Or it might be assistant, which is your agent's own previous replies.
+[Show slide three, titled What Is a Session]
 
-So the trick to memory is this. Instead of sending a list with a single user message every time, we keep that list alive between turns. When the user speaks, we append their message to the list. When the agent responds, we append the response to the list too. Then on the next turn, we send the entire list again. The model reads back through the history and understands context naturally, because it can literally see everything that was said before.
+A session is nothing more than a container with an identity. You give each conversation an ID, and every message that belongs to that conversation gets stored against it. The user says something, you save it. The agent replies, you save that too. Over time, that session becomes an ordered list of messages, and that list is the agent's sense of where it is in the conversation.
 
-[Highlight the append lines in the editor]
+Now here is the part that surprises almost every beginner. Large language models do not actually remember anything between calls. Not one thing. The illusion of memory comes entirely from us. Every time we send a request, we resend the relevant conversation history along with the new message. The model reads it fresh, every single time, and responds as though it had been paying attention all along.
 
-Watch what happens now. I ask it to summarize the report. Then I say, make it shorter. And look, it knows exactly what I mean, because the earlier exchange is sitting right there in the conversation history. That is memory. That is the whole secret.
+So memory, at the engineering level, is a retrieval and packaging job. You store the history, you fetch the right slice of it, and you include it in the next request. That is the whole trick.
 
-[Switch back to instructor]
+[Switch to screen recording]
 
-But we are building a professional tool, not a toy, so let us go one step further. In real applications, you will have many users, and each user might have several separate conversations. You do not want your accountant's chat about tax records leaking into your marketing team's chat about campaign ideas. This is where sessions come in.
+Let me show you this in code. I am starting with the agent we finished yesterday, and I am adding three things.
 
-[Show slide 3: One database, three separate session threads branching out]
+First, a session store. For today, a simple dictionary keyed by session ID is completely fine. We are not optimizing for scale yet, we are optimizing for understanding. Later you can swap this for Redis or a database, and nothing else in your design has to change.
 
-A session is simply a labelled conversation. We give each conversation a unique session identifier, and we store its message history under that label. When a request comes in, we look up the history for that session, add the new message, get a response, and save it back. Same list, just organised properly.
+Second, an append step. Before we call the model, we append the user's new message to the session. After we get a reply, we append that too. Notice how small this function is. Memory is not complicated code, it is disciplined code.
 
-[Switch to screen recording, showing a session store]
+Third, and this is the part that matters most, we pass the history into the prompt. Watch the order here. System instructions first, then the conversation history, then any retrieved documents from our knowledge base, then the user's new question. That structure gives the model everything it needs to answer in context.
 
-In the notebook for today, we start with a simple dictionary in memory, which is perfect for learning. Then we upgrade to persistent storage, so your conversations survive after you shut down the program. Your agent can now pick up a discussion from yesterday.
+[Pause on the terminal output]
 
-There is one more thing I need you to understand, and this is what separates a good engineer from someone who just copies code. Conversation history is not free. Every message you send back counts toward the model's context window, and it costs tokens. A conversation that runs for hours will eventually get too long, too slow, and too expensive.
+Now watch this. I ask about project deadlines. I get an answer. And now I say, summarize that in three bullets. And there it is. It knows exactly what I meant. Same model, same knowledge base, one new capability.
 
-[Show slide 4: A long list being compressed into a short summary block]
+One caution before you go. Sessions grow, and every message you resend costs tokens and money. So we cap it. In the recording I keep the most recent ten exchanges and summarize anything older into a short paragraph that rides along at the top. Your agent stays coherent, and your bill stays reasonable.
 
-So we manage it. Today we cover two practical strategies. The first is windowing, where we keep only the most recent turns, plus the system instructions. The second is summarising, where we ask the model to compress older parts of the conversation into a short recap, and we carry that recap forward instead of every single word.
+[Return to instructor, facing camera]
 
-That is genuinely how professional agent systems handle long conversations.
+Your assignment for today. Add session handling to your agent, hold a real six turn conversation with it, and confirm it can answer a follow up question that only makes sense in context. Then try breaking it. Start a second session and make sure the two do not leak into each other.
 
-[Switch back to instructor, direct to camera]
+Take your time with this one. When you finish, your agent stops being a search box and starts being a collaborator.
 
-So here is your assignment. Open today's notebook, add session memory to your agent, and then hold a conversation of at least ten turns without ever repeating context. Then push it. Try to break it. Find out what happens when the history gets long.
-
-You now have an agent that thinks, acts, and remembers. Tomorrow, on Day Four, we give it knowledge, connecting it to your own documents so it can answer questions about things it was never trained on.
-
-Excellent work today. I will see you in the next session.
-
-[End screen: Day Four, Give It Knowledge]
+Tomorrow, on Day 4, we give it tools, so it can actually do things in the world. I will see you there.

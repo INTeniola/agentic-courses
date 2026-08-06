@@ -1,59 +1,43 @@
 # Day 5 Video Transcript: Multi-Agent Teams
 
-[Open on instructor, facing camera]
+[Show slide 1: Day 5, Multi-Agent Teams]
 
-Welcome back, and congratulations. You have made it to Day Five. Take a second to appreciate that, because the person who started this bootcamp on Monday could not do what you are about to do today.
+Welcome back, and congratulations. You have made it to Day 5 of the AgenticLabs bootcamp. Take a second to appreciate that. On Monday, you were writing your first prompt. Today, you are going to build a team of AI agents that work together like colleagues. That is real progress, and you earned it.
 
-Let me remind you of the journey. On Day One, you built your first agent. On Day Two, you gave it memory. On Day Three, you handed it tools, so it could search, calculate, and reach out into the real world. On Day Four, you gave it a knowledge base of your own documents. Today, we do the final thing. Today, we stop building one worker and start building a team.
+[Show slide 2: One agent versus a team]
 
-[Show slide one: One agent versus three agents]
+Let me start with the why. Up to now, your Second Brain has been a single agent. It searches your notes, it answers your questions, and honestly, it does a decent job. But you have probably noticed something. When you ask it to do too much at once, the quality drops. Ask it to research a topic, organise the findings, and write a polished report in one go, and the results feel rushed. Shallow research. Generic writing. Instructions quietly forgotten.
 
-Here is the core idea, and it is simpler than it sounds. A single agent trying to do everything is like one person running an entire consulting firm alone. They research, they analyse, they write, they edit, they format the final report. They can do it, but quality drops as the workload grows. The context gets crowded. The instructions get confused.
+That is not a flaw in the model. It is a flaw in the design. We are asking one worker to do three different jobs at the same time.
 
-So we do what every good organisation does. We divide the labour.
+Think about how a real consulting team operates. A manager breaks the project down and decides who does what. A researcher goes deep on the facts. A writer turns raw material into something a human actually wants to read. Nobody tries to be all three at once, because focus produces quality. That is exactly the principle we are applying today.
 
-Today we are building a three-person team. A Manager, a Researcher, and a Writer. Each one has one job, one clear identity, and one clear standard of success. And when they work together, the output is dramatically better than anything a single agent produced this week.
+[Show slide 3: The three roles]
 
-[Show slide two: The three roles]
+So let us meet our team. First, the Manager. This agent does not research and does not write. Its only job is to understand the request, break it into clear tasks, hand those tasks to the right specialist, and review what comes back. Think of it as the project lead.
 
-Let us meet them.
+Second, the Researcher. This agent has the tools. It can search your knowledge base, pull from your notes, and gather external sources if you have given it web access. Its output is not a beautiful report. Its output is accurate raw material, with sources attached.
 
-First, the Manager. The Manager does not do the research and does not write the report. The Manager receives the goal from the user, breaks that goal into tasks, decides who does what, and reviews the work that comes back. If the research is thin, the Manager sends it back. Think of the Manager as your project lead.
+Third, the Writer. This agent has no search tools at all, and that is deliberate. It receives the Researcher's findings and shapes them into a structured, readable report. Because it cannot go looking for new facts, it stays grounded in what the Researcher actually found. That single constraint does a lot of work in reducing hallucination.
 
-Second, the Researcher. The Researcher has one obsession: finding accurate, relevant, current information. This agent gets the search tools we built on Day Three and the document knowledge base we built on Day Four. The Researcher does not worry about beautiful writing. The Researcher worries about facts, sources, and completeness.
+[Switch to screen recording]
 
-Third, the Writer. The Writer receives the research findings and turns them into something a human being actually wants to read. Clear structure, clean language, a strong opening, a useful conclusion. The Writer does not go looking for new information. The Writer shapes what already exists.
+Let us build it. I am in our project folder from yesterday, and you can see the agent file we have been growing all week.
 
-Notice the pattern. Narrow role, clear goal, specific tools. That is the whole philosophy of multi-agent design.
+The first thing I am doing is defining each agent with three ingredients. A role, which is the job title. A goal, which is what success looks like for that agent. And a backstory, which gives the model context about how it should think. Notice how specific I am being here. I am not writing, you are a helpful assistant. I am writing, you are a research analyst who values primary sources and flags uncertainty rather than guessing. Specificity is what turns a generic model into a specialist.
 
-[Switch to screen recording: code editor]
+Now watch the tools line. The Researcher gets the knowledge base tool. The Writer gets nothing. The Manager gets delegation ability. Who holds which tool is one of the most important design decisions you will make in a multi-agent system.
 
-Now let us build it together. On screen you can see we define each agent with three things. A role, which is the job title. A goal, which is the single outcome that agent is responsible for. And a backstory, which is the personality and expertise we want the model to adopt. Do not skip the backstory. It genuinely changes the quality of the output.
+Next, the tasks. Each task needs a clear description and, just as importantly, an expected output. This is where beginners often lose time, so let me be direct. If you tell an agent to summarise the research, you will get something vague. If you tell it to produce five bullet points, each with a source and a confidence level, you get something you can actually use downstream. Be explicit about the shape of the output, because the next agent depends on it.
 
-Next, we define the tasks. Task one, research the topic. Task two, write the report using the research. And here is the important line, right here. We tell task two that it depends on the output of task one. That dependency is the handoff. That is how the Researcher passes work to the Writer.
+Finally, I am wiring them into a crew and setting the process to run in sequence. Research first, writing second, review last. Let us run it.
 
-Finally, we assemble them into a crew and we set the process to sequential, which simply means one after the other, coordinated by our Manager.
+[Zoom in on the terminal output]
 
-[Show terminal running]
+Look at what is happening in the logs. The Manager is assigning the task. The Researcher is calling your knowledge base and pulling real passages from your own notes. Now the handoff. The Writer picks up those findings and starts drafting. And there it is, a structured report with sections and citations, built by three agents that each did one thing well.
 
-Let us run it. Watch the logs. You can see the Manager assigning the task. Now the Researcher is calling the search tool. It is gathering sources. And now, look, the Writer receives that research and begins drafting.
+[Return to camera]
 
-[Show final report output]
+Your assignment for today is straightforward. Add a fourth agent to this crew. Maybe a Critic that reviews the report for weak claims, or an Editor that tightens the language. You have everything you need to do it.
 
-And there it is. A structured, sourced, readable report, produced by a team of agents you designed.
-
-[Return to instructor on camera]
-
-Three quick warnings before I let you go.
-
-One, do not add too many agents. Beginners get excited and build teams of ten. Start with three. Complexity is a cost, not a feature.
-
-Two, be specific. Vague goals produce vague output. Every agent should be able to answer clearly what success looks like.
-
-Three, always define your final deliverable. Tell the system exactly what the last output should look like, or you will get a beautiful conversation and no report.
-
-Your final assignment is this. Take the agent team we built today and point it at a topic in your own industry. Fintech, agriculture, education, health, whatever you care about. Generate a real report. Then share it in the community channel.
-
-You started this week not knowing what an agent was. You are finishing it as someone who can design a team of them. That is a genuine skill, and the market is looking for it right now.
-
-Well done. Go and build. I will see you at graduation.
+One last thought. Today you stopped being someone who prompts AI and became someone who designs AI systems. That is a genuinely valuable skill, and it is yours now. Post your report in the community channel so we can all see what you built. I am proud of the work you have done this week. Let us finish strong.

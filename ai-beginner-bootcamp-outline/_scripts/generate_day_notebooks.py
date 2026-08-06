@@ -29,7 +29,7 @@ def generate_theory_markdown(day_number, topic, focus):
     We are building a Jupyter Notebook for Day {day_number} of a beginner bootcamp.
     Topic: {topic}
     Focus: {focus}
-    Capstone Goal: Building a "Universal Knowledge Worker" AI Agent.
+    Capstone Goal: Building a "Second Brain" AI Agent.
     
     Write a 300-500 word "Theory Primer" in Markdown format that explains the core concepts 
     for this day before the student starts coding. 
@@ -71,8 +71,10 @@ def update_notebook(day_number, topic, focus):
         if cell['cell_type'] == 'markdown':
             new_source = []
             for line in cell['source']:
-                line = line.replace('Research Assistant', 'Universal Knowledge Worker')
-                line = line.replace('research assistant', 'Universal Knowledge Worker')
+                line = line.replace('Universal Knowledge Worker', 'Second Brain')
+                line = line.replace('Universal knowledge worker', 'Second Brain')
+                line = line.replace('Research Assistant', 'Second Brain')
+                line = line.replace('research assistant', 'Second Brain')
                 new_source.append(line)
             cell['source'] = new_source
             
